@@ -11,7 +11,7 @@ function NavBar() {
           <div className="flex-shrink-0 mx-[90px] my-[27px]">
             <Link to="/">  {/* Use Link for navigation */}
               <img
-                src={require('./Assets/Group 19.png')}
+                src={require('./Assets/logo2.jpg')}
                 alt="Logo"
                 className="w-[117px] h-[120px] object-cover"
               />
