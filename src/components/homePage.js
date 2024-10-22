@@ -30,7 +30,7 @@ const homePage = () => {
       {/* Section Title with lines on either side */}
       <div className="flex items-center justify-center mb-12 px-8">
         <div className="flex-grow h-0.5 bg-white mr-8"></div> {/* Line to the left */}
-        <p className="text-center text-white text-4xl font-light tracking-wider whitespace-nowrap">
+        <p className="text-center text-white text-4xl font-extralight	 tracking-wider whitespace-nowrap">
           UNSERE STELLENANGEBOTE
         </p>
         <div className="flex-grow h-0.5 bg-white ml-8"></div> {/* Line to the right */}
@@ -98,30 +98,25 @@ const homePage = () => {
       <div className="max-w-5xl mx-auto py-16 text-center">
         {/* Main Heading with Horizontal Lines */}
         <div className="flex items-center mb-6">
-          <div className="flex-grow border-t border-gray-600 -ml-32"></div>
-          <h2 className="text-5xl font-light pb-10">
+          <div className="flex-grow border-t border-[#003049] -ml-40 border-2"></div>
+          <h2 className="text-5xl font-light pb-10 text-[#003049] px-8 tracking-wider">
             DIE RICHTIGE PERSON AM<br /> RICHTIGEN ORT
           </h2>
-          <div className="flex-grow border-t border-gray-600 -mr-32"></div>
+          <div className="flex-grow border-t border-[#003049] -mr-40 border-2"></div>
         </div>
   
         {/* Subheading Paragraph */}
-        <p className="mb-16 max-w-3xl mx-auto">
+        <p className="mb-16 max-w-3xl mx-auto text-[#003049] ">
           Wir haben die Erfahrung und das Fingerspitzengefühl, Ihnen schnell die
           richtige Person zu vermitteln. Einzige bekannte Risiken und
           Nebenwirkungen: Unsere Begeisterung kann ansteckend sein.
         </p>
   
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 ">
   {/* Left Card */}
-  <div className="border border-[#003049] rounded-lg p-8 relative">
+  <div className="border border-[#003049] rounded-lg p-8 relative border-2 ">
     {/* Top Border with Gap for Icon */}
-    <div className="absolute top-0 left-0 right-0 flex items-center justify-center -translate-y-1/2">
-      
-      <div className="w-32 h-0"></div> {/* Widened Gap for the icon */}
-
-    </div>
     <div className="flex items-center justify-center -mt-20 mb-4">
       <img
         src={require('../Assets/manlogo.png')} // Replace with the actual path to the person icon
@@ -129,43 +124,133 @@ const homePage = () => {
         className="w-24 h-24 bg-white  p-0"
       />
     </div>
-    <h3 className="font-bold text-xl mb-4">Für Bewerber</h3>
-    <p className="text-gray-600 mb-8 text-center">
+    <h3 className="font-bold text-xl mb-4 text-[#003049] ">Für Bewerber</h3>
+    <p className="text-[#003049]  mb-8 text-center">
       Ist Ihr Traumjob dabei? Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch<br/> heute.
     </p>
-    <button className="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
+    <button className="bg-gray-800 text-white  rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
       LERNE MEHR
     </button>
   </div>
 
   {/* Right Card */}
-  <div className="border border-[#003049] rounded-lg p-8 relative">
-    {/* Top Border with Gap for Icon */}
-    <div className="absolute top-0 left-0 right-0 flex items-center justify-center -translate-y-1/2">
-    
-      <div className="w-32 h-0"></div> {/* Widened Gap for the icon */}
-      
+  <div className="border border-[#003049] rounded-lg p-8 relative border-2">
+  {/* Top Border with Gap for Icon */}
+ 
+
+  {/* Icon Section */}
+  <div className="flex items-center justify-center -mt-20 mb-4">
+    <img
+      src={require('../Assets/houselogo.png')} // Replace with the actual path to the person icon
+      alt="Für Bewerber Icon"
+      className="w-18 h-24 bg-white  pl-6 pr-6"
+    />
+  </div>
+
+  {/* Card Content */}
+  <h3 className="font-bold text-xl mb-4 text-[#003049] ">Für Bewerber</h3>
+  <p className="text-[#003049]  mb-8 text-center">
+    Ist Ihr Traumjob dabei? Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch<br /> heute.
+  </p>
+  <button className="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
+    LERNE MEHR
+  </button>
+</div>
+
+</div>
+
+
+      </div>
     </div>
-    <div className="flex items-center justify-center -mt-20 mb-4">
+    <div className="bg-[#003049] text-white py-16 font-montserrat">
+  {/* Section: Über Keta */}
+  <div className="max-w-7xl mx-auto px-8 md:px-16 mb-24">
+  {/* Title with lines */}
+  <div className="flex items-center justify-center mb-24 ">
+    <div className="flex-grow border-t border-white -ml-24"></div>
+    <h2 className="text-5xl font-light text-center px-8">ÜBER KETA</h2>
+    <div className="flex-grow border-t border-white -mr-24"></div>
+  </div>
+
+  {/* Content - Image and Description */}
+  <div className="flex flex-col md:flex-row items-center md:justify-between gap-12">
+    {/* Hexagonal Image */}
+    <div className="w-full  md:w-1/2 flex  ">
       <img
-        src={require('../Assets/houselogo.png')} // Replace with the actual path to the building icon
-        alt="Für Unternehmen Icon"
-        className="w-24 h-24 bg-white  p-0 "
+        src={require('../Assets/Polygon.png')} // Replace with the actual path to the image
+        alt="Über Keta Image"
+        className="w-[90%] md:w-[734px] h-auto"
       />
     </div>
-    <h3 className="font-bold text-xl mb-4">Für Unternehmen</h3>
-    <p className="text-gray-600 mb-8 text-center">
-      Wir kümmern uns mit Herzblut, dass Ihr Betrieb gut aufgehoben und mit qualifiziertem Personal ausgestattet ist.
+
+    {/* Text Content */}
+    <div className=" w-[1000px]		 text-left  md:pl-8 text-lg">
+      <p className="mb-4">
+        Wir sind seit 2013 in den Diensten der Menschheit tätig. Unser Kerngeschäft
+        konzentrierte sich zunächst auf die Personalvermittlung und den Personalverleih im Gesundheitswesen.
+      </p>
+      <p className="mb-4">
+        Aufgrund des Bedarfs an professionellen Fachkräften in anderen Branchen
+        haben wir uns entschieden, zusätzliche Fachbereiche anzubieten.
+      </p>
+      <p className="mb-4">
+        Wir bieten Ihnen verschiedene Anstellungsmöglichkeiten, sowohl
+        Festanstellungen als auch temporäre Einsätze.
+      </p>
+      <p className="mb-4">
+        Mit Herzblut sorgen wir dafür, dass unsere Kunden gut betreut werden.
+        Unsere Aufgabe besteht darin, sich um Ihre Bedürfnisse zu kümmern. Wir
+        haben die Erfahrung und das Feingefühl, Ihnen rasch die richtigen Mitarbeiter
+        zu vermitteln.
+      </p>
+      <p className="mb-4">
+        Ihr Erfolg ist unser Erfolg. Wir bieten Ihnen das beste Angebot.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  {/* Section: Sprechstunde */}
+  <div className="max-w-7xl mx-auto px-8 md:px-16">
+  {/* Title with lines */}
+  <div className="flex items-center justify-center mb-12">
+    <div className="flex-grow border-t border-white -ml-24"></div>
+    <h2 className="text-4xl font-light text-center px-8">
+      PROFITIEREN SIE VON <br />UNSERER SPRECHSTUNDE
+    </h2>
+    <div className="flex-grow border-t border-white -mr-24"></div>
+  </div>
+
+  {/* Card Section */}
+  <div className="bg-[#011627] rounded-2xl relative overflow-hidden">
+  {/* Image */}
+  <div className="w-full h-full">
+    <img
+      src={require('../Assets/talkative-cute-businesswoman-talking-mobile-phone-smiling-having-happy-conversation-standing-white-background 1.png')} // Replace with the actual path to the image
+      alt="Sprechstunde Image"
+      className="w-full h-full object-cover rounded-lg" // Add rounded-lg here to match the container
+    />
+  </div>
+
+  {/* Text and Button Overlay */}
+  <div className="absolute inset-0 flex flex-col justify-center p-8 md:p-16 text-white">
+    <p className="mb-6 text-lg max-w-sm">
+      Können wir Ihnen helfen? Gerne beraten wir Sie unverbindlich. Rufen Sie uns
+      jetzt an oder schreiben Sie uns.
     </p>
-    <button className="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
-      LERNE MEHR
+    <button className="bg-[#003049] text-white px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit">
+      KONTAKTIEREN SIE UNS
     </button>
   </div>
 </div>
 
-      </div>
-    </div>
+</div>
+
   </div>
+</div>
+
+  
   
   );
 };
