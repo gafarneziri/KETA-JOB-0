@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from './components/HomePage';
+import HomePage from './components/homePage';
 import Dienstleistungen from './components/Dienstleistungen';
 import Dienstleistungen1 from './components/Dienstleistungen1';
 import Dienstleistungen2 from './components/Dienstleistungen2';
