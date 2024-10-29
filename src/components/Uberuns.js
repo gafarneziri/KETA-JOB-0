@@ -5,6 +5,7 @@ import nathalieImage from '../Assets/NathaleImage.png';
 import fatimeImage from '../Assets/FatimeImage.png';
 import emailIcon from '../Assets/emailIcon.png';
 import phoneIcon from '../Assets/phoneIcon.png';
+import languageIcon from '../Assets/languageIcon.png';
 
 
 const Uberuns = () => {
@@ -41,61 +42,75 @@ const Uberuns = () => {
   </div>
 
 
+
+
   <div className="flex justify-center space-x-8 py-10">
-      {/* Profile 1 */}
-      <div className="text-white p-6 rounded-lg shadow-lg">
-        <img src={nidaImage} alt="Nida Hamiti" className="w-48 h-48 object-cover rounded-lg mx-auto mb-4" />
-        <h2 className="text-center text-xl font-semibold">Frau</h2>
-        <h3 className="text-center text-2xl font-bold">Nida Hamiti</h3>
-        <p className="text-center text-md mb-2">CEO</p>
-        <p className="text-center text-sm">Deutsch, Englisch, Albanisch</p>
-        {/* Icons below */}
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="mailto:nida@keta-group.ch" className="flex items-center">
-            <img src={emailIcon} alt="Email Icon" className="w-6 h-6" /> 
-          </a>
-          <a href="tel:+41412521818" className="flex items-center">
-            <img src={phoneIcon} alt="Phone Icon" className="w-6 h-6" />
-          </a>
-        </div>
-      </div>
-
-      {/* Profile 2 */}
-      <div className="text-white p-6 rounded-lg shadow-lg">
-        <img src={nathalieImage} alt="Nathalie Dellspreger" className="w-48 h-48 object-cover rounded-lg mx-auto mb-4" />
-        <h2 className="text-center text-xl font-semibold">Frau</h2>
-        <h3 className="text-center text-2xl font-bold">Nathalie Dellspreger</h3>
-        <p className="text-center text-md mb-2">Stv. Geschäftsführerin</p>
-        <p className="text-center text-sm">Deutsch, Englisch, Portugiesisch</p>
-        {/* Icons below */}
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="mailto:nathalie@keta-group.ch" className="flex items-center">
-            <img src={emailIcon} alt="Email Icon" className="w-6 h-6" /> 
-          </a>
-          <a href="tel:+41412521818" className="flex items-center">
-            <img src={phoneIcon} alt="Phone Icon" className="w-6 h-6" />
-          </a>
-        </div>
-      </div>
-
-      {/* Profile 3 */}
-      <div className="text-white p-6 rounded-lg shadow-lg">
-        <img src={fatimeImage} alt="Fatime Hamiti" className="w-48 h-48 object-cover rounded-lg mx-auto mb-4" />
-        <h2 className="text-center text-xl font-semibold">Frau</h2>
-        <h3 className="text-center text-2xl font-bold">Fatime Hamiti</h3>
-        <p className="text-center text-md mb-2">CFO</p>
-        <p className="text-center text-sm">Deutsch, Englisch, Albanisch</p>
-        {/* Icons below */}
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="mailto:fatime@keta-group.ch" className="flex items-center">
-            <img src={emailIcon} alt="Email Icon" className="w-6 h-6" /> 
-          </a>
-          <a href="tel:+41412521818" className="flex items-center">
-            <img src={phoneIcon} alt="Phone Icon" className="w-6 h-6" />
-          </a>
-        </div>
-      </div>
+  {/* Profile 1 */}
+  <div className="text-white p-6">
+    <img src={nidaImage} alt="Nida Hamiti" className="w-96 h-auto object-cover rounded-lg mx-auto mb-4" />
+    <h2 className="text-center text-xl ">Frau</h2>
+    <h3 className="text-center text-2xl font-semibold">Nida Hamiti</h3>
+    <p className="text-center text-md mb-2">CEO</p>
+    <hr className="border-t border-gray-400 my-4 mx-14" />
+    <div className="flex items-center justify-center space-x-2">
+      <img src={languageIcon} alt="Language Icon" className="w-5 h-5" />
+      <p className="text-sm">Deutsch, Englisch, Albanisch</p>
     </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
+      <a href="mailto:nida@keta-group.ch" className="text-sm">nh@keta-group.ch</a>
+    </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+      <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
+    </div>
+  </div>
+
+  {/* Profile 2 */}
+  <div className="text-white p-6">
+    <img src={nathalieImage} alt="Nathalie Dellspreger" className="w-96 h-auto object-cover rounded-lg mx-auto mb-4" />
+    <h2 className="text-center text-xl ">Frau</h2>
+    <h3 className="text-center text-2xl font-semibold">Nathalie Dellspreger</h3>
+    <p className="text-center text-md mb-2">Stv. Geschäftsführerin</p>
+    <hr className="border-t border-gray-400 my-4 mx-14" />
+    <div className="flex items-center justify-center space-x-2">
+      <img src={languageIcon} alt="Language Icon" className="w-5 h-5" />
+      <p className="text-sm">Deutsch, Englisch, Portugiesisch</p>
+    </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
+      <a href="mailto:nathalie@keta-group.ch" className="text-sm">nd@keta-group.ch</a>
+    </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+      <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
+    </div>
+  </div>
+
+  {/* Profile 3 */}
+  <div className="text-white p-6">
+    <img src={fatimeImage} alt="Fatime Hamiti" className="w-96 h-auto object-cover rounded-lg mx-auto mb-4" />
+    <h2 className="text-center text-xl ">Frau</h2>
+    <h3 className="text-center text-2xl font-semibold">Fatime Hamiti</h3>
+    <p className="text-center text-md mb-2">CFO</p>
+    <hr className="border-t border-gray-400 my-4 mx-14" />
+    <div className="flex items-center justify-center space-x-2">
+      <img src={languageIcon} alt="Language Icon" className="w-5 h-5" />
+      <p className="text-sm">Deutsch, Englisch, Albanisch</p>
+    </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
+      <a href="mailto:fatime@keta-group.ch" className="text-sm">fh@keta-group.ch</a>
+    </div>
+    <div className="flex items-center justify-center space-x-2 mt-4">
+      <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+      <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
+    </div>
+  </div>
+</div>
+
+
+
 
 </div>
 

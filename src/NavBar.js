@@ -36,12 +36,13 @@ function NavBar() {
 
           {/* Right Side - Apply Button */}
           <div className="mr-20">
+            <Link to="/bewerben">
             <button
               type="button"
-              className="text-white bg-custom-color font-medium rounded-full text-sm px-10 py-2.5 mb-2 mt-2"
-            >
+              className="text-white bg-[#003049] font-medium rounded-full text-sm px-10 py-2.5 mb-2 mt-2">
               BEWERBEN
             </button>
+            </Link>
           </div>
 
         </div>

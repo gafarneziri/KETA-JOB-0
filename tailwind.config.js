@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'], // Add Roboto as a custom font
+        monntserrat: ["Monsterrat"] ,
       },
     },
   },
