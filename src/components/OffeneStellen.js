@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Dienstleistungen2 = () => {
+const OffeneStellen = () => {
   return (
     <div>Dienstleistungen2</div>
   )
 }
 
-export default Dienstleistungen2;
+export default OffeneStellen;
