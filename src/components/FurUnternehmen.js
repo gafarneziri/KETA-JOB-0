@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Medical from '../Assets/Medical.png';
 import Kader from '../Assets/Kader.png';
 import Verka from '../Assets/Verika.png';
@@ -11,7 +11,20 @@ import { Link, useLocation } from 'react-router-dom';
 
 const FurUnternehmen = () => {
   const location = useLocation();
-  const [activeSection, setActiveSection] = useState(location.pathname.replace('/', '') || 'unternehmen');
+
+  // Determine the active section based on the current URL pathname
+  const activeSection = (() => {
+    switch (location.pathname) {
+      case '/unternehmen':
+        return 'unternehmen';
+      case '/bewerber':
+        return 'bewerber';
+      case '/stellen':
+        return 'stellen';
+      default:
+        return 'unternehmen'; // Default to 'unternehmen' if no match is found
+    }
+  })();
 
   return (
     <div className="page2 bg-[#003049] min-h-screen flex flex-col items-center">
@@ -19,29 +32,26 @@ const FurUnternehmen = () => {
         <div className="sections flex space-x-16 text-white uppercase text-[40px] font-Montserrat pt-20">
           <Link
             to="/unternehmen"
-            className={`cursor-pointer font-normal ${activeSection === 'unternehmen' ? 'border-b-4 border-white' : ''}`}
-            onClick={() => setActiveSection('unternehmen')}
+            className={`cursor-pointer font-normal ${location.pathname === '/unternehmen' ? 'border-b-4 border-white' : ''}`}
           >
             FÜR UNTERNEHMEN
           </Link>
           <Link
             to="/bewerber"
-            className={`cursor-pointer font-normal ${activeSection === 'bewerber' ? 'border-b-4 border-white' : ''}`}
-            onClick={() => setActiveSection('bewerber')}
+            className={`cursor-pointer font-normal ${location.pathname === '/bewerber' ? 'border-b-4 border-white' : ''}`}
           >
             FÜR BEWERBER
           </Link>
           <Link
             to="/stellen"
-            className={`cursor-pointer font-normal ${activeSection === 'stellen' ? 'border-b-4 border-white' : ''}`}
-            onClick={() => setActiveSection('stellen')}
+            className={`cursor-pointer font-normal ${location.pathname === '/stellen' ? 'border-b-4 border-white' : ''}`}
           >
             OFFENE STELLEN
           </Link>
         </div>
 
         {/* The thin white line to maintain styling consistency */}
-        <div className="h-px bg-gray-500 mt-0 w-[1250px] "></div>
+        <div className="h-px bg-gray-500 mt-0 w-[1200px] "></div>
       </div>
 
       <div className="section1 bg-[#003049] flex flex-col items-center min-h-screen pt-14 pb-0">
@@ -62,7 +72,7 @@ const FurUnternehmen = () => {
         </p>
       </div>
 
-      <div className="bg-[#003049] min-h-screen flex flex-col items-center py-12">
+      <div className="bg-[#003049] min-h-screen flex flex-col items-center -mt-4 mb-16">
         <div className="Box grid grid-cols-1 md:grid-cols-4 gap-[80px] py-4">
 
           {/* Box Components */}
