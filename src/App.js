@@ -9,6 +9,8 @@ import OffeneStellen from './components/OffeneStellen';
 import UNSEREDIENSTLEISTUNGEN from './components/UNSEREDIENSTLEISTUNGEN';
 import UberUNS from './components/Uberuns';
 import Kontakt from './components/Kontakt';
+import Bewerben from './components/Bewerben';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/stellen" element={<OffeneStellen />} />
         <Route path="/uber-uns" element={<UberUNS />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path='/bewerbenbutton' element={<Bewerben />} />
       </Routes>
       <Footer />
     </Router>

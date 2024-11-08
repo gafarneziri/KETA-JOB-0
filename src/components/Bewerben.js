@@ -42,121 +42,110 @@ const Bewerben = () => {
         </div>
       </div>
 
-     <div className="bg-[#003049] text-white py-32 px-16 font-Montserrat">
+      <div className="bg-[#003049] text-white py-32 px-16 font-Montserrat">
   {/* Form Container */}
-  <div className="bg-white rounded-lg shadow-lg p-20  max-w-[1739px] h-[1982px] mx-auto">
+  <div className="bg-white rounded-lg shadow-lg p-20 max-w-[1800px] h-auto mx-auto">
 
     {/* Personal Information Section */}
-    <div className="flex items-start mb-8">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold w-[200px] pr-8 -mt-12 whitespace-nowrap">PERSÖNLICHE INFORMATIONEN</h3>
-      <div className="grid grid-cols-2 gap-6 w-[1000px] ml-4">
-        <div className="flex flex-col">
+    <div className="flex flex-col mb-12">
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
+      <div className="grid grid-cols-2 gap-y-6 gap-x-24 w-2/3 mx-auto">
+        <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px]">Vorname</label>
-          <input type="text" placeholder="Vorname" className="border border-gray-300 rounded-[236.29px] w-[496.08px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+          <input type="text" placeholder="Vorname" className="border border-gray-300 rounded-[236.29px] w-[420px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px] ">Nachname</label>
-          <input type="text" placeholder="Nachname" className="border border-gray-300 rounded-[236.29px] w-[496.08px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px]">Nachname</label>
+          <input type="text" placeholder="Nachname" className="border border-gray-300 rounded-[236.29px] w-[420px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049]  text-[27.28px]">E-Mail Adresse</label>
-          <input type="email" placeholder="Email" className="border border-gray-300 rounded-[236.29px] w-[496.08px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px]">E-Mail Adresse</label>
+          <input type="email" placeholder="Email" className="border border-gray-300 rounded-[236.29px] w-[420px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px] ">Mobil</label>
-          <input type="tel" placeholder="Tel: z.B. +43…" className="border border-gray-300 rounded-[236.29px] w-[496.08px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px]">Mobil</label>
+          <input type="tel" placeholder="Tel: z.B. +43…" className="border border-gray-300 rounded-[236.29px] w-[420px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
       </div>
     </div>
 
     {/* Address Section */}
-    <div className="flex items-start mb-8 mt-16">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold w-[200px] pr-8 -mt-4">ADRESSE</h3>
-      <div className="grid grid-cols-3 gap-6 w-[1000px] ml-4 pt-8">
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px]">Strasse / Hausnummer</label>
-          <input type="text" placeholder="Adresse" className="border border-gray-300 rounded-[236.29px] w-[300] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+    <div className="flex flex-col mb-12">
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">ADRESSE</h3> {/* Increased mb-8 for spacing */}
+      <div className="grid grid-cols-3 gap-y-10 gap-x-64 w-2/3 mx-auto">
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Strasse / Hausnummer</label>
+          <input type="text" placeholder="Adresse" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px]">Ort</label>
-          <input type="text" placeholder="Ort" className="border border-gray-300 rounded-[236.29px] w-[300px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+          <input type="text" placeholder="Ort" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px]">PLZ</label>
-          <input type="text" placeholder="PLZ" className="border border-gray-300 rounded-[236.29px] w-[300px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+          <input type="text" placeholder="PLZ" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
       </div>
     </div>
 
     {/* Job Details Section */}
-    <div className="flex items-start mb-10 mt-16">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold w-[200px] pr-8 -mt-4 whitespace-nowrap">JOB DETAILS</h3>
-      <div className="grid grid-cols-3 gap-6 w-[1000px] ml-4 pt-8">
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px]">Gewünschtes Pensum</label>
-          <input type="text" placeholder="z.B. 80%" className="border border-gray-300 rounded-[236.29px] w-[300px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+    <div className="flex flex-col mb-12">
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">JOB DETAILS</h3> {/* Increased mb-8 for spacing */}
+      <div className="grid grid-cols-3 gap-y-10 gap-x-64 w-2/3 mx-auto">
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Gewünschtes Pensum</label>
+          <input type="text" placeholder="z.B. 80%" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px]">Datum Von</label>
-          <input type="date" className="border border-gray-300 rounded-[236.29px] w-[300px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Datum Von</label>
+          <input type="date" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27.28px]">Datum Bis</label>
-          <input type="date" className="border border-gray-300 rounded-[236.29px] w-[300px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
+        <div className="flex flex-col mt-4">
+          <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Datum Bis</label>
+          <input type="date" className="border border-gray-300 rounded-[236.29px] w-[320px] h-[63px] px-4 py-2 text-black placeholder-gray-500" />
         </div>
       </div>
     </div>
 
-     {/* Documents Section */}
-     <div className="flex items-start mb-14  ">
-            <h3 className="text-[#003049] text-[27.28px] font-semibold w-1/3 pr-4 -mt-4">DOKUMENTE</h3>
+    {/* Documents Section */}
+    <div className="flex flex-col mb-12">
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-10 mr-10">DOKUMENTE</h3> {/* Increased mb-8 for spacing */}
+      <div className="grid grid-cols-2 gap-4 w-2/3 mx-auto">
+        <div className="flex flex-col">
+          <label className="text-[#003049] text-[27px] mb-2">Bewerbungsschreiben</label>
+          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
+        </div>
+        <div className="flex flex-col">
+          <label className="text-[#003049] text-[27px] mb-2">Arbeitszeugnisse / Diplome</label>
+          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
+        </div>
+        <div className="flex flex-col">
+          <label className="text-[#003049] text-[27px] mb-2">Bild Hochladen</label>
+          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
+        </div>
+        <div className="flex flex-col">
+          <label className="text-[#003049] text-[27px] mb-2">CV</label>
+          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
+        </div>
+      </div>
 
-            <div className='ml-[100px]'>
-              <div className="grid grid-cols-2 gap-4 w-2/3 mt-10">
-                <div className="flex flex-col">
-                  <label className="text-[#003049] text-[27px] mb-2">Bewerbungsschreiben</label>
-                  <button className="bg-[#003049] text-white  text-[23px] rounded-[236.29px] w-[388.21px] h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-                </div>
-                <div className="flex flex-col">
-                  <label className="text-[#003049] text-[27px] mb-2">Arbeitszeugnisse / Diplome</label>
-                  <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-[388.21px] h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-                </div>
-                <div className="flex flex-col">
-                  <label className="text-[#003049] text-[27px] mb-2">Bild Hochladen</label>
-                  <button className="bg-[#003049] text-white text-[23px]  rounded-[236.29px] w-[388.21px] h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-                </div>
-                <div className="flex flex-col">
-                  <label className="text-[#003049] text-[27px] mb-2">CV</label>
-                  <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-[388.21px] h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-                </div>
-              </div>
+      {/* Message Field */}
+      <div className="flex flex-col items-start mb-6 w-2/3 mx-auto mt-6">
+        <label className="text-[#003049] text-[25px] mb-2">Mitteilung</label>
+        <textarea placeholder="Weitere Informationen hinzufügen" className="border border-gray-300 rounded-[23.01px] w-full h-[215.24px] px-4 py-4 text-black placeholder-gray-500 resize-none"></textarea>
+      </div>
 
-              <div className='pr-[400px] mt-6'>
-                {/* Message Field */}
-                <div className="flex flex-col items-start mb-6 w-[835.4px]  mx-auto">
-                  <label className="text-[#003049] text-[25px] mb-2">Mitteilung</label>
-                  <textarea
-                    placeholder="Weitere Informationen hinzufügen"
-                    className="border border-gray-300 rounded-lg rounded-[23.01px] w-[835.4px] h-[215.24px] px-4 py-4 w-full h-24 text-black placeholder-gray-500 resize-none"
-                  ></textarea>
-                </div>
+      {/* Agreement Checkbox */}
+      <div className="flex items-center mb-16 w-2/3 mx-auto">
+        <input type="checkbox" className="mr-2" />
+        <span className="text-[#003049] text-[20px]">ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.</span>
+      </div>
 
-                {/* Agreement Checkbox */}
-                <div className="flex items-center mb-16 mt-8 w-2/3 mx-auto ml-[20px]">
-                  <input type="checkbox" className="mr-2" />
-                  <span className="text-[#003049] text-[20px]">ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.</span>
-                </div>
-
-                {/* Submit Button */}
-                <div className="w-2/3 mx-auto ml-[20px]">
-                  <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[388.21px] h-[72.71px] text-[27.05px] whitespace-nowrap">BEWERBUNG SENDEN</button>
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
+      {/* Submit Button */}
+      <div className="w-2/3 mx-auto">
+        <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[388.21px] h-[72.71px] text-[27.05px] whitespace-nowrap">BEWERBUNG SENDEN</button>
+      </div>
+    </div>
   </div>
 </div>
 
