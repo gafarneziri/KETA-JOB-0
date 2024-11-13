@@ -63,10 +63,10 @@ const FurBewerben = () => {
         </div>
 
         <p className="text-white text-left text-[28px] px-8 font-Montserrat ml-6 mr-6 mt-10">
-        Wir bringen Sie leidenschaftlich mit den besten Karrieremöglichkeiten in Verbindung. Ursprünglich auf das Gesundheitswesen spezialisiert, haben wir unser Angebot auf verschiedene Branchen ausgeweitet.
-Ihre berufliche Entwicklung ist uns wichtig. Kontaktieren Sie uns, um schnell die passende Stelle für Ihren nächsten Karriereschritt zu finden.
-<br/><br/>
-Wir bieten Ihnen Top-Chancen in den folgenden Fachbereichen:
+          Wir bringen Sie leidenschaftlich mit den besten Karrieremöglichkeiten in Verbindung. Ursprünglich auf das Gesundheitswesen spezialisiert, haben wir unser Angebot auf verschiedene Branchen ausgeweitet.
+          Ihre berufliche Entwicklung ist uns wichtig. Kontaktieren Sie uns, um schnell die passende Stelle für Ihren nächsten Karriereschritt zu finden.
+          <br /><br />
+          Wir bieten Ihnen Top-Chancen in den folgenden Fachbereichen:
         </p>
       </div>
       <div className="bg-[#003049] min-h-screen flex flex-col items-center -mt-44 mb-16">
@@ -82,12 +82,14 @@ Wir bieten Ihnen Top-Chancen in den folgenden Fachbereichen:
             { img: Kauf, title: 'KAUFMÄNNISCHE BERUFE' },
             { img: Verka, title: 'VERKAUFSBERUFE' }
           ].map((box, index) => (
-            <div key={index} className="relative bg-[#003049] text-white rounded-2xl p-6 w-[280px] h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300">
-              <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white transform hover:-translate-y-2 transition duration-300">
-                <img src={box.img} alt={`${box.title} Logo`} className="h-14 w-14 hover:text-[#003049]" />
+            <Link key={index} to="/anfrageformular2">
+              <div className="relative bg-[#003049] text-white rounded-2xl p-6 w-[280px] h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300">
+                <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white transform hover:-translate-y-2 transition duration-300">
+                  <img src={box.img} alt={`${box.title} Logo`} className="h-14 w-14 hover:text-[#003049]" />
+                </div>
+                <h2 className="text-center text-xl font-semibold mt-10">{box.title}</h2>
               </div>
-              <h2 className="text-center text-xl font-semibold mt-10">{box.title}</h2>
-            </div>
+            </Link>
           ))}
 
         </div>
