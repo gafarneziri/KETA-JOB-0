@@ -143,4 +143,4 @@ function anfrageformular() {
   )
 }
 
-export default anfrageformular
+export default anfrageformular;

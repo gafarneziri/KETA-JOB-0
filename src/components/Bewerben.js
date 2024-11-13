@@ -48,7 +48,7 @@ const Bewerben = () => {
 
     {/* Personal Information Section */}
     <div className="flex flex-col mb-12">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
       <div className="grid grid-cols-2 gap-y-6 gap-x-24 w-2/3 mx-auto">
         <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px]">Vorname</label>
@@ -71,7 +71,7 @@ const Bewerben = () => {
 
     {/* Address Section */}
     <div className="flex flex-col mb-12">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">ADRESSE</h3> {/* Increased mb-8 for spacing */}
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049] ">ADRESSE</h3> {/* Increased mb-8 for spacing */}
       <div className="grid grid-cols-3 gap-y-10 gap-x-64 w-2/3 mx-auto">
         <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Strasse / Hausnummer</label>
@@ -90,7 +90,7 @@ const Bewerben = () => {
 
     {/* Job Details Section */}
     <div className="flex flex-col mb-12">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8">JOB DETAILS</h3> {/* Increased mb-8 for spacing */}
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-8 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">JOB DETAILS</h3> {/* Increased mb-8 for spacing */}
       <div className="grid grid-cols-3 gap-y-10 gap-x-64 w-2/3 mx-auto">
         <div className="flex flex-col mt-4">
           <label className="text-[#003049] text-[27.28px] whitespace-nowrap">Gewünschtes Pensum</label>
@@ -109,7 +109,7 @@ const Bewerben = () => {
 
     {/* Documents Section */}
     <div className="flex flex-col mb-12">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-10 mr-10">DOKUMENTE</h3> {/* Increased mb-8 for spacing */}
+      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-10 mr-10 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">DOKUMENTE</h3> {/* Increased mb-8 for spacing */}
       <div className="grid grid-cols-2 gap-4 w-2/3 mx-auto">
         <div className="flex flex-col">
           <label className="text-[#003049] text-[27px] mb-2">Bewerbungsschreiben</label>
