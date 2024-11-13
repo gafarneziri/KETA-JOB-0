@@ -18,6 +18,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/unsere" element={<UNSEREDIENSTLEISTUNGEN/>} />
         <Route path="/unternehmen" element={<FurUnternehmen />} />
         <Route path="/bewerber" element={<FurBewerben />} />
         <Route path="/stellen" element={<OffeneStellen />} />
