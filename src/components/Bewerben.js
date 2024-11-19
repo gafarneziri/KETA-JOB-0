@@ -2,6 +2,17 @@ import React from 'react';
 import Uberuns1 from '../Assets/Bewerben.png';
 
 const Bewerben = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // Optional: adds a smooth scrolling effect
+    });
+  };
+  
+  
+  window.scrollTo(0, 0);
+
   return (
     <div className="Uberuns bg-[#003049] text-white font-Montserrat relative">
       {/* Top Section with Background Image and Centered Title */}

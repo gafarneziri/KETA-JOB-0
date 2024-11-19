@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
-const homePage = () => {
+const HomePage = () => {
+
+  const navigate = useNavigate(); // Initialize navigate hook
+
   return (
     <div>
     <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${require('../Assets/bgfoto.png')})` }}>
@@ -20,9 +24,15 @@ const homePage = () => {
         </p>
   
         {/* Button below the subheading */}
-        <button className="mt-12 bg-white text-custom-color px-16 py-3 rounded-full text-2xl font-roboto">
-          HIER
-        </button>
+        <button
+        onClick={() => {
+          navigate('/bewerbenbutton')
+          window.scrollTo(0, 0);
+        }} // Add navigation to the button
+        className="mt-12 bg-white text-custom-color px-16 py-3 rounded-full text-2xl font-roboto"
+      >
+        HIER
+      </button>
       </div>
     </div>
   
@@ -51,7 +61,7 @@ const homePage = () => {
             Es braucht wenig, bis geschätzte Mitarbeitende ausfallen. Dies hinterlässt
             Lücken im Team und kann die Qualität der Leistungen beeinträchtigen.
           </p>
-          <button className="bg-white text-[#033755] px-6 py-2 rounded-full">
+          <button  onClick={() => navigate('/bewerbenbutton')}  className="bg-white text-[#033755] px-6 py-2 rounded-full">
             JETZT BEWERBEN
           </button>
         </div>
@@ -68,7 +78,12 @@ const homePage = () => {
             Wir haben das Netzwerk, die Erfahrung und das Gespür, um Leute zu finden, die
             Sie und Ihren Betrieb langfristig weiterbringen.
           </p>
-          <button className="bg-white text-[#033755] px-6 py-2 rounded-full">
+          <button
+           onClick={() => {
+            navigate('/bewerbenbutton')
+            window.scrollTo(0, 0);
+          }}  
+          className="bg-white text-[#033755] px-6 py-2 rounded-full">
             JETZT BEWERBEN
           </button>
         </div>
@@ -86,7 +101,7 @@ const homePage = () => {
             eine neue berufliche Herausforderung wünschen, wir bieten Ihnen die
             Unterstützung und Ressourcen, die Sie benötigen.
           </p>
-          <button className="bg-white text-[#033755] px-6 py-2 rounded-full">
+          <button  onClick={() => navigate('/bewerbenbutton')}  className="bg-white text-[#033755] px-6 py-2 rounded-full">
             JETZT BEWERBEN
           </button>
         </div>
@@ -124,11 +139,11 @@ const homePage = () => {
         className="w-24 h-24 bg-white  p-0"
       />
     </div>
-    <h3 className="font-bold text-xl mb-4 text-[#003049] ">Für Bewerber</h3>
+    <h3 className="font-bold text-xl mb-4 text-[#003049] ">FÜR BEWERBER</h3>
     <p className="text-[#003049]  mb-8 text-center">
-      Ist Ihr Traumjob dabei? Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch<br/> heute.
+      Ist Ihr Traumjob dabei? <br /> Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch heute.
     </p>
-    <button className="bg-gray-800 text-white  rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
+    <button  onClick={() => navigate('/bewerber')} className="bg-gray-800 text-white  rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
       LERNE MEHR
     </button>
   </div>
@@ -148,11 +163,11 @@ const homePage = () => {
   </div>
 
   {/* Card Content */}
-  <h3 className="font-bold text-xl mb-4 text-[#003049] ">Für Bewerber</h3>
+  <h3 className="font-bold text-xl mb-4 text-[#003049] ">FÜR UNTERNEHMEN</h3>
   <p className="text-[#003049]  mb-8 text-center">
-    Ist Ihr Traumjob dabei? Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch<br /> heute.
+  Wir kümmern uns mit Herzblut, dass Ihr Betrieb gut aufgehoben und mit qualifiziertem Personal<br /> ausgestattet ist.
   </p>
-  <button className="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
+  <button  onClick={() => navigate('/unternehmen')} className="bg-gray-800 text-white rounded-full px-6 py-2 hover:bg-gray-700 transition duration-200">
     LERNE MEHR
   </button>
 </div>
@@ -239,7 +254,12 @@ const homePage = () => {
       Können wir Ihnen helfen? Gerne beraten wir Sie unverbindlich. Rufen Sie uns
       jetzt an oder schreiben Sie uns.
     </p>
-    <button className="bg-[#003049] text-white px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit">
+    <button
+      onClick={() => {
+        navigate('/kontakt')
+        window.scrollTo(0, 0);
+      }} 
+     className="bg-[#003049] text-white px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit">
       KONTAKTIEREN SIE UNS
     </button>
   </div>
@@ -255,4 +275,4 @@ const homePage = () => {
   );
 };
 
-export default homePage;
+export default HomePage;
