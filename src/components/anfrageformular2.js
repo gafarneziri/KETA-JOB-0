@@ -1,16 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 const anfrageformular2 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth", // Optional: adds a smooth scrolling effect
+        });
+      };
+      
+      
+      window.scrollTo(0, 0);
   return (
     <div className="min-h-screen bg-[#003049] flex justify-center items-center py-12">
-      <div className="bg-white rounded-[30px] shadow-lg p-12 w-full max-w-[1160px]">
-        {/* Back Arrow */}
-        <Link to="/furunternehmen" className="text-white text-3xl ml-2 mb-8 inline-block">
-          &lt;
-        </Link>
+             {/* Back Arrow */}
+             <Link
+  to="/bewerber" // Update this to redirect to FurBewerben.js
+  className="absolute top-44 left-16 text-white text-[50px] hover:text-gray-300 transition"
+  style={{ transform: 'scaleY(1.7)', height: '60px' }} // Adjust height here
+>{scrollToTop}
+  &lt;
+</Link>
 
+
+
+      <div className="bg-white rounded-[30px] shadow-lg p-12 w-full max-w-[1160px] mt-20">
+   
         {/* Title */}
-        <h2 className="text-[#003049] text-center text-3xl font-semibold mb-10 uppercase -mt-16">
+        <h2 className="text-[#003049] text-center text-3xl font-semibold mb-10 uppercase -mt-4 ">
           Anfrageformular
         </h2>
 
