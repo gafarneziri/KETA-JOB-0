@@ -130,25 +130,25 @@ const Page5 = () => {
             <div className="mt-8 flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <img
-                  src={require('../Assets/2.png')} // Replace with actual Facebook logo path
+                  src={require('../Assets/facebook.png')} // Replace with actual Facebook logo path
                   alt="Facebook Icon"
-                  className="w-8 h-8 filter invert contrast-4 brightness-900"
+                  className="w-8 h-8 rounded-4 "
                 />
                 <p>@ketajob</p>
               </div>
               <div className="flex items-center gap-4">
                 <img
-                  src={require('../Assets/3.png')} // Replace with actual Instagram logo path
+                  src={require('../Assets/instagram1.png')} // Replace with actual Instagram logo path
                   alt="Instagram Icon"
-                  className="w-8 h-8 filter invert contrast-4 brightness-900"
+                  className="w-8 h-8 "
                 />
                 <p>@ketajob</p>
               </div>
               <div className="flex items-center gap-4">
                 <img
-                  src={require('../Assets/1.png')} // Replace with actual LinkedIn logo path
+                  src={require('../Assets/in.png')} // Replace with actual LinkedIn logo path
                   alt="LinkedIn Icon"
-                  className="w-8 h-8 filter invert contrast-4 brightness-900"
+                  className="w-8 h-8 "
                 />
                 <p>@ketajob</p>
               </div>

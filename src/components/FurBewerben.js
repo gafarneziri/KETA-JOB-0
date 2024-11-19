@@ -51,7 +51,7 @@ const FurBewerben = () => {
         </div>
 
         {/* The thin white line to maintain styling consistency */}
-        <div className="h-px bg-gray-500 mt-0 w-[1200px]"></div>
+        <div className="h-px bg-gray-500 mt-0 w-[1250px]"></div>
       </div>
       <div className="section1 bg-[#003049] flex flex-col items-center min-h-screen pt-14 pb-0">
         <div className="flex items-center mb-4">
