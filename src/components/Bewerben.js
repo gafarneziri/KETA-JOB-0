@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Uberuns1 from '../Assets/Bewerben.png';
 
 const Bewerben = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth", // Optional: adds a smooth scrolling effect
+  const [selectedFiles, setSelectedFiles] = useState({});
+
+  // Function to handle file selection
+  const handleFileChange = (e, fieldName) => {
+    setSelectedFiles({
+      ...selectedFiles,
+      [fieldName]: e.target.files[0], // Store the selected file in the state
     });
   };
-  
-  
-  window.scrollTo(0, 0);
 
+  // Function to remove the selected file
+  const removeFile = (fieldName) => {
+    const updatedFiles = { ...selectedFiles };
+    delete updatedFiles[fieldName]; // Remove the file from the state
+    setSelectedFiles(updatedFiles);
+  };
   return (
+    
+    <div> 
     <div className="Uberuns bg-[#003049] text-white font-Montserrat relative">
       {/* Top Section with Background Image and Centered Title */}
       <div className="relative w-full">
@@ -118,27 +125,45 @@ const Bewerben = () => {
       </div>
     </div>
 
-    {/* Documents Section */}
-    <div className="flex flex-col mb-12">
-      <h3 className="text-[#003049] text-[27.28px] font-semibold mb-10 mr-10 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">DOKUMENTE</h3> {/* Increased mb-8 for spacing */}
-      <div className="grid grid-cols-2 gap-4 w-2/3 mx-auto">
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27px] mb-2">Bewerbungsschreiben</label>
-          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-        </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27px] mb-2">Arbeitszeugnisse / Diplome</label>
-          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-        </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27px] mb-2">Bild Hochladen</label>
-          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-        </div>
-        <div className="flex flex-col">
-          <label className="text-[#003049] text-[27px] mb-2">CV</label>
-          <button className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 py-2">DATEI HOCHLADEN</button>
-        </div>
-      </div>
+     {/* Documents Section */}
+     <div className="flex flex-col mb-12">
+            <h3 className="text-[#003049] text-[27.28px] font-semibold mb-10 mr-10 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">DOKUMENTE</h3>
+            <div className="grid grid-cols-2 gap-12 w-2/3 mx-auto">
+              {[
+                { label: 'Bewerbungsschreiben', fieldName: 'bewerbungsschreiben' },
+                { label: 'Arbeitszeugnisse / Diplome', fieldName: 'arbeitszeugnisse' },
+                { label: 'Bild Hochladen', fieldName: 'bild' },
+                { label: 'CV', fieldName: 'cv' },
+              ].map(({ label, fieldName }) => (
+                <div key={fieldName} className="flex flex-col">
+                  <label className="text-[#003049] text-[27px] mb-2">{label}</label>
+                  <input
+                    type="file"
+                    id={fieldName}
+                    onChange={(e) => handleFileChange(e, fieldName)}
+                    className="hidden"
+                  />
+                  <label htmlFor={fieldName}>
+                    <div className="bg-[#003049] text-white text-[23px] rounded-[236.29px] w-full h-[72.71px] px-6 pt-[17px] text-center cursor-pointer">
+                      Datei Hochladen
+                    </div>
+                  </label>
+                  {selectedFiles[fieldName] && (
+                    <div className="mt-2 flex items-center">
+                      <p className="text-sm text-gray-600">{selectedFiles[fieldName].name}</p>
+                      <button
+                        type="button"
+                        onClick={() => removeFile(fieldName)}
+                        className="ml-4 text-red-500 hover:text-red-700 text-[16px] font-semibold"
+                      >
+                        X
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
 
       {/* Message Field */}
       <div className="flex flex-col items-start mb-6 w-2/3 mx-auto mt-6">
@@ -148,7 +173,7 @@ const Bewerben = () => {
 
       {/* Agreement Checkbox */}
       <div className="flex items-center mb-16 w-2/3 mx-auto">
-        <input type="checkbox" className="mr-2" />
+        <input type="radio" className="mr-2 h-5 w-5" />
         <span className="text-[#003049] text-[20px]">ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.</span>
       </div>
 
