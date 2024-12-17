@@ -58,12 +58,21 @@ const Page5 = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center w-full px-8">
             <div className="flex-grow border-t border-white"></div>
-            <h2 className="text-white text-5xl font-light px-8 whitespace-nowrap">
+            <h2 className="text-white text-[70px] font-light px-8 whitespace-nowrap">
               KONTAKTIEREN SIE UNS
             </h2>
             <div className="flex-grow border-t border-white"></div>
           </div>
         </div>
+      </div>
+      <div>
+        <h1>.<br /> .<br />  . <br /> .<br /> .</h1>
+
+
+      </div>
+      {/* Spacer */}
+      <div className="flex-grow flex items-center justify-center">
+        <div className="w-full max-w-6xl border-t border-gray-200"></div>
       </div>
 
       {/* Main Content Section */}
@@ -177,6 +186,112 @@ const Page5 = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Solid Background Section */}
+      <div className="bg-[#003049] pt-16 pb-16">
+        {/* Find Us on Google Maps Section */}
+        <div className="col-span-full flex items-center justify-center -mt-[80px] relative  ">
+          <div className="flex-grow border-t border-white ml-24"></div>
+          <h2 className="px-8 text-4xl  text-center text-white">FINDEN SIE UNS AUF GOOGLE MAPS</h2>
+          <div className="flex-grow border-t border-white mr-24"></div>
+        </div>
+
+
+        {/* Address Section */}
+
+
+
+
+
+        {/* First Location Section */}
+
+        <div className="col-span-full mt-8 flex justify-center bg-[#003049] py-8 pl-12 pr-12 rounded-[100px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.862670489217!2d8.429576676108958!3d47.14825207257426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a52c9d10e71%3A0xe18fd43e7e1de764!2sBirkenstrasse%2047%2C%206343%20Rotkreuz%2C%20Switzerland!5e0!3m2!1sen!2s!4v1699023561701!5m2!1sen!2s"
+            width="100%"
+            height="500"
+            style={{
+              border: 0,
+              borderRadius: "12px",
+            }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div className="col-span-full flex justify-center mt-8 text-3xl text-white">
+          <p className="flex items-center gap-2 font-light">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 2C8.13401 2 5 5.13401 5 9C5 13.25 12 21 12 21C12 21 19 13.25 19 9C19 5.13401 15.866 2 12 2Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z"
+              />
+            </svg>
+            Birkenstrasse 47, 6343 Rotkreuz, Schweiz
+          </p>
+        </div>
+      
+
+        {/* Second Location Section */}
+        <div className="col-span-full mt-8 flex justify-center bg-[#003049] py-8 pl-12 pr-12 rounded-[100px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.935764728746!2d8.552244476103232!3d47.36559457916806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900bdbb196fa31%3A0xe252f58b68922107!2sOthmarstrasse%208%2C%208008%20Z%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2s!4v1699023648912!5m2!1sen!2s"
+            width="100%"
+            height="500"
+            style={{
+              border: 0,
+              borderRadius: "12px",
+            }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+
+
+        <div className="col-span-full flex justify-center mt-8 text-3xl text-white">
+          <p className="flex items-center gap-2 font-light">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 2C8.13401 2 5 5.13401 5 9C5 13.25 12 21 12 21C12 21 19 13.25 19 9C19 5.13401 15.866 2 12 2Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z"
+              />
+            </svg>
+            Othmarstrasse 8, 8008 Zürich, Schweiz
+          </p>
+        </div>
+       
+
+
       </div>
     </div>
   );

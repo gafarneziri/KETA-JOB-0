@@ -26,6 +26,8 @@ const FurBewerben = () => {
     }
   })();
 
+  window.scrollTo(0, 0);
+
   return (
     <div className="page2 bg-[#003049] min-h-screen flex flex-col items-center">
       <div>
