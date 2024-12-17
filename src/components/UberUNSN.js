@@ -19,7 +19,7 @@ const Uberuns = () => {
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="flex items-center justify-center w-full">
         <hr className="border-t-2 border-white w-2/6" />
-        <p className="  font-Montserrat  text-[80px] mx-4">ÜBER UNS</p>
+        <p className="  font-Montserrat  text-[70px] mx-4">ÜBER UNS</p>
         <hr className="border-t-2 border-white w-2/6" />
       </div>
     </div>

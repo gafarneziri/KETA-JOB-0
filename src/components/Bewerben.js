@@ -16,14 +16,14 @@ const Bewerben = () => {
   return (
     <div className="Uberuns bg-[#003049] text-white font-Montserrat relative">
       {/* Top Section with Background Image and Centered Title */}
-      <div className="relative w-full">
+      <div className="relative h-[350px] w-full pt-8 mb-12">
         <img src={Uberuns1} alt="uberuns" className="w-full h-auto" />
 
         {/* Centered Title on Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center justify-center">
             <hr className="border-t-2 border-white" style={{ width: '500px' }} />
-            <p className="font-Montserrat text-[60px] mx-4 font-normal">BEWERBEN</p>
+            <p className="font-Montserrat text-[70px] mx-4 font-normal">BEWERBEN</p>
             <hr className="border-t-2 border-white" style={{ width: '500px' }} />
           </div>
         </div>
