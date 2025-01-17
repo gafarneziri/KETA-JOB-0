@@ -1,7 +1,6 @@
 import React from 'react';
 import Uberuns1 from '../Assets/Uberuns.png';
-import nidaImage from '../Assets/NidaImage.png';
-import nathalieImage from '../Assets/NathaleImage.png';
+import nidaImage from '../Assets/NidaImage1.png';
 import fatimeImage from '../Assets/FatimeImage.png';
 import emailIcon from '../Assets/emailIcon.png';
 import phoneIcon from '../Assets/phoneIcon.png';
@@ -66,26 +65,6 @@ const Uberuns = () => {
           </div>
         </div>
 
-        {/* Profile 2 */}
-        <div className="text-white p-4 sm:p-6">
-          <img src={nathalieImage} alt="Nathalie Dellspreger" className="w-full sm:w-96 h-auto object-cover rounded-lg mx-auto mb-4" />
-          <h2 className="text-center text-xl">Frau</h2>
-          <h3 className="text-center text-2xl font-semibold">Nathalie Dellspreger</h3>
-          <p className="text-center text-md mb-2">Stv. Geschäftsführerin</p>
-          <hr className="border-t border-gray-400 my-4 mx-8 sm:mx-14" />
-          <div className="flex items-center justify-center space-x-2">
-            <img src={languageIcon} alt="Language Icon" className="w-5 h-5" />
-            <p className="text-sm">Deutsch, Englisch, Portugiesisch</p>
-          </div>
-          <div className="flex items-center justify-center space-x-2 mt-4">
-            <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
-            <a href="mailto:nathalie@keta-group.ch" className="text-sm">nd@keta-group.ch</a>
-          </div>
-          <div className="flex items-center justify-center space-x-2 mt-4">
-            <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
-            <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
-          </div>
-        </div>
 
         {/* Profile 3 */}
         <div className="text-white p-4 sm:p-6">

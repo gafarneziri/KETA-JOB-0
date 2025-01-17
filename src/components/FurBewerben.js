@@ -31,51 +31,72 @@ const FurBewerben = () => {
   return (
     <div className="page2 bg-[#003049] min-h-screen flex flex-col items-center">
       <div>
-        <div className="sections flex space-x-16 text-white uppercase text-[40px] font-Montserrat pt-20">
+        <div className="sections flex flex-wrap justify-center space-x-4 md:space-x-16 text-white uppercase text-[10px] md:text-[40px] font-Montserrat pt-10 md:pt-20">
           <Link
             to="/unternehmen"
-            className={`cursor-pointer font-normal ${activeSection === 'unternehmen' ? 'border-b-4 border-white' : ''}`}
+            className={`cursor-pointer font-normal ${activeSection === 'unternehmen' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
           >
             FÜR UNTERNEHMEN
           </Link>
           <Link
             to="/bewerber"
-            className={`cursor-pointer font-normal ${activeSection === 'bewerber' ? 'border-b-4 border-white' : ''}`}
+            className={`cursor-pointer font-normal ${activeSection === 'bewerber' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
           >
             FÜR BEWERBER
           </Link>
           <Link
             to="/stellen"
-            className={`cursor-pointer font-normal ${activeSection === 'stellen' ? 'border-b-4 border-white' : ''}`}
+            className={`cursor-pointer font-normal ${activeSection === 'stellen' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
           >
             OFFENE STELLEN
           </Link>
         </div>
 
-        {/* The thin white line to maintain styling consistency */}
-        <div className="h-px bg-gray-500 mt-0 w-[1250px]"></div>
+        {/* The thin white line */}
+        <div className="h-px bg-gray-500 mt-0 w-full md:w-[1250px]"></div>
       </div>
-      <div className="section1 bg-[#003049] flex flex-col items-center min-h-screen pt-14 pb-0">
+
+      <div className="section1 bg-[#003049] flex flex-col items-center pt-10 md:pt-14 pb-6">
         <div className="flex items-center mb-4">
-          <hr className="border-t-2 border-gray-500 mr-4" style={{ width: '150px' }} />
-          <span className="text-white uppercase text-[40px] font-Montserrat font-normal mx-4">
+          {/* Left Line */}
+          <hr
+            className="border-t-2 border-gray-500 md:hidden"
+            style={{ width: '51px' }}
+          />
+          <hr
+            className="border-t-2 border-gray-500 hidden md:block mr-4"
+            style={{ width: '150px' }}
+          />
+
+          {/* Title */}
+          <span className="text-white uppercase text-[22px] md:text-[40px] font-Montserrat font-normal text-center">
             UNSERE PROFESSIONELLEN DIENSTLEISTUNGEN
           </span>
-          <hr className="border-t-2 border-gray-500 ml-4" style={{ width: '150px' }} />
+
+          {/* Right Line */}
+          <hr
+            className="border-t-2 border-gray-500 md:hidden"
+            style={{ width: '51px' }}
+          />
+          <hr
+            className="border-t-2 border-gray-500 hidden md:block ml-4"
+            style={{ width: '150px' }}
+          />
         </div>
 
-        <p className="text-white text-left text-[28px] px-8 font-Montserrat ml-6 mr-6 mt-10">
+        <p className="text-white text-left text-[12px] md:text-[28px] px-4 font-Montserrat mx-6 mt-6 md:mt-10">
           Wir bringen Sie leidenschaftlich mit den besten Karrieremöglichkeiten in Verbindung. Ursprünglich auf das Gesundheitswesen spezialisiert, haben wir unser Angebot auf verschiedene Branchen ausgeweitet.
           Ihre berufliche Entwicklung ist uns wichtig. Kontaktieren Sie uns, um schnell die passende Stelle für Ihren nächsten Karriereschritt zu finden.
           <br /><br />
           Wir bieten Ihnen Top-Chancen in den folgenden Fachbereichen:
         </p>
       </div>
-      <div className="bg-[#003049] min-h-screen flex flex-col items-center -mt-44 mb-16">
-        <div className="Box grid grid-cols-1 md:grid-cols-4 gap-[80px] py-4">
 
+      <div className="bg-[#003049] flex flex-col items-center pb-16">
+        <div className="Box grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-[80px] py-6">
           {/* Box Components */}
-          {[{ img: Medical, title: 'MEDICAL' },
+          {[
+            { img: Medical, title: 'MEDICAL' },
             { img: Kader, title: 'KADER HÖHERE ANGESTELLTE' },
             { img: Diens, title: 'DIENSTLEISTUNGS BERUFE' },
             { img: Bank, title: 'BANK UND VERSICHERUNGSWESEN' },
@@ -84,16 +105,34 @@ const FurBewerben = () => {
             { img: Kauf, title: 'KAUFMÄNNISCHE BERUFE' },
             { img: Verka, title: 'VERKAUFSBERUFE' }
           ].map((box, index) => (
-            <Link key={index} to="/anfrageformular2">
-              <div className="relative bg-[#003049] text-white rounded-2xl p-6 w-[280px] h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300">
-                <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white transform hover:-translate-y-2 transition duration-300">
-                  <img src={box.img} alt={`${box.title} Logo`} className="h-14 w-14 hover:text-[#003049]" />
-                </div>
-                <h2 className="text-center text-xl font-semibold mt-10">{box.title}</h2>
+            <Link
+              key={index}
+              to="/anfrageformular2"
+              className="group relative bg-[#003049] text-white rounded-2xl p-4 md:p-6 w-[158.69px] md:w-[280px] h-[175.32px] md:h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300"
+            >
+              <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white  transition duration-300">
+                <img
+                  src={box.img}
+                  alt={`${box.title} Logo`}
+                  className="h-12 w-12 md:h-14 md:w-14 group-hover:text-[#003049]"
+                />
               </div>
+              <h2
+                className={`text-center text-[13.45px] md:text-xl font-semibold mt-8 md:mt-10 ${
+                  box.title === 'BANK UND VERSICHERUNGSWESEN' ? 'break-word' : ''
+                }`}
+                style={
+                  box.title === 'BANK UND VERSICHERUNGSWESEN'
+                    ? { wordBreak: 'break-word', hyphens: 'auto' }
+                    : {}
+                }
+              >
+                {box.title === 'BANK UND VERSICHERUNGSWESEN'
+                  ? 'BANK UND VERSICHERUNG-\nSWESEN'
+                  : box.title}
+              </h2>
             </Link>
           ))}
-
         </div>
       </div>
     </div>

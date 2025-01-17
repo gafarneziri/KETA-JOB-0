@@ -8,44 +8,57 @@ function Footer() {
   return (
     <div className='bg-[#003049]'>
       <footer className="bg-white pt-4 pb-4 rounded-t-3xl">
-        {/* Wrapper with blue background to showcase the rounded corners */}
-        <div className="container mx-auto px-6 lg:px-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center -mb-4 space-y-8 md:space-y-0">
-            
+        <div className="container mx-auto px-4 sm:px-6 lg:px-20">
+          <div className="flex flex-col justify-center items-center md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
             {/* Left Section - Logo */}
-            <div className="flex-shrink-0">
-              <img src={Logo} alt="Keta Job Logo" className="h-[90px] object-contain" />
+            <div className="flex-shrink-0 flex justify-center">
+              <img src={Logo} alt="Keta Job Logo" className="h-[70px] sm:h-[90px] object-contain" />
             </div>
 
             {/* Center Section - Social Links */}
-            <div className="flex space-x-8 justify-center items-center">
+            <div className="flex justify-center space-x-6 sm:space-x-8">
               <a href="https://www.linkedin.com/company/keta-real-estate/posts/?feedView=all">
-                <img src={LinkedInIcon} alt="LinkedIn" className="h-10 w-10 hover:opacity-75 transition" />
+                <img src={LinkedInIcon} alt="LinkedIn" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
               <a href="https://www.facebook.com/ketarealestate1?_rdr">
-                <img src={FacebookIcon} alt="Facebook" className="h-10 w-10 hover:opacity-75 transition" />
+                <img src={FacebookIcon} alt="Facebook" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
               <a href="https://www.instagram.com/ketarealestate/">
-                <img src={InstagramIcon} alt="Instagram" className="h-10 w-10 hover:opacity-75 transition" />
+                <img src={InstagramIcon} alt="Instagram" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
             </div>
 
             {/* Right Section - Contact Information */}
-            <div className="text-sm text-center md:text-left space-y-1">
-              <p className="font-semibold">MOBIL :</p>
-              <p>+41 41 252 18 18</p>
-              <p>+41 41 252 18 19</p>
-              <p className="font-semibold mt-2">EMAIL :</p>
-              <p className="underline">INFO@KETAJOB.CH</p>
+            <div className="text-xs sm:text-sm text-center space-y-2 sm:space-y-1">
+              <div className="block md:hidden">
+                <p className="font-semibold">EMAIL :</p>
+                <p className="underline">INFO@KETAJOB.CH</p>
+                <p className="font-semibold mt-4">MOBIL :</p>
+                <p>+41 41 252 18 18</p>
+                <p>+41 41 252 18 19</p>
+              </div>
+              <div className="hidden md:block">
+                <p className="font-semibold">MOBIL :</p>
+                <p>+41 41 252 18 18</p>
+                <p>+41 41 252 18 19</p>
+                <p className="font-semibold mt-4">EMAIL :</p>
+                <p className="underline">INFO@KETAJOB.CH</p>
+              </div>
             </div>
           </div>
 
+          {/* Address Section (Mobile-Only) */}
+          <div className="block md:hidden pt-8 text-center text-[10px] text-gray-600">
+            <p>OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ</p>
+            <p>BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ</p>
+          </div>
+
           {/* Address and Privacy Statement */}
-          <div className="pt-8 text-center text-xs text-gray-600 -mb-4">
+          <div className="pt-8 text-center sm:block hidden text-[10px] sm:text-xs text-gray-600">
             <p>
               *Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt)
               werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung
-              eines funktionsfähigen und <br /> nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.
+              eines funktionsfähigen und <br className="hidden sm:block" /> nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.
             </p>
           </div>
         </div>
@@ -53,13 +66,24 @@ function Footer() {
         {/* Full-Width Line */}
         <div className="w-full border-t border-gray-400 mt-8"></div>
 
-        <div className="container mx-auto px-6 lg:px-20">
+
+        <div className="block md:hidden pt-4 text-center text-[10px] text-gray-600">
+          <p>
+            *Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt)
+            werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung
+            eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.
+          </p>
+          <p className="mt-2">© 2024 KETA GROUP, ALL RIGHTS RESERVED</p>
+        </div>
+
+        <div className="container mx-auto sm:block hidden  px-4 sm:px-6 lg:px-20">
           {/* Footer Bottom */}
-          <div className="mt-4 flex justify-between text-xs text-gray-600">
+          <div className="mt-4 flex flex-row justify-center items-center text-[10px] sm:text-xs text-gray-600 gap-[260px] text-center  ">
             <p>© 2024 KETA GROUP, ALL RIGHTS RESERVED</p>
             <p>OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ</p>
             <p>BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ</p>
           </div>
+
         </div>
       </footer>
     </div>

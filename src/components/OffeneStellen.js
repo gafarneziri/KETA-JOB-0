@@ -22,38 +22,37 @@ const OffeneStellen = () => {
   })();
 
   return (
-    <div className="page2 bg-[#003049] min-h-screen flex flex-col items-center">
-      <div>
-        <div className="sections flex space-x-16 text-white uppercase text-[40px] font-Montserrat pt-20">
-          <Link
-            to="/unternehmen"
-            className={`cursor-pointer font-normal ${activeSection === 'unternehmen' ? 'border-b-4 border-white' : ''}`}
-          >
-            FÜR UNTERNEHMEN
-          </Link>
-          <Link
-            to="/bewerber"
-            className={`cursor-pointer font-normal ${activeSection === 'bewerber' ? 'border-b-4 border-white' : ''}`}
-          >
-            FÜR BEWERBER
-          </Link>
-          <Link
-            to="/stellen"
-            className={`cursor-pointer font-normal ${activeSection === 'stellen' ? 'border-b-4 border-white' : ''}`}
-          >
-            OFFENE STELLEN
-          </Link>
-        </div>
-
-        {/* The thin white line to maintain styling consistency */}
-        <div className="h-px bg-gray-500 mt-0 w-[1200px] "></div>
-      </div>
+    <div className="page2 bg-[#003049] min-h-screen flex flex-col items-center pb-[60px]">
+          <div>
+                 <div className="sections flex space-x-4 md:space-x-16 text-white uppercase text-[10px] md:text-[40px] font-Montserrat pt-10 md:pt-20">
+                   <Link
+                     to="/unternehmen"
+                     className={`cursor-pointer font-normal ${location.pathname === '/unternehmen' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
+                   >
+                     FÜR UNTERNEHMEN
+                   </Link>
+                   <Link
+                     to="/bewerber"
+                     className={`cursor-pointer font-normal ${location.pathname === '/bewerber' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
+                   >
+                     FÜR BEWERBER
+                   </Link>
+                   <Link
+                     to="/stellen"
+                     className={`cursor-pointer font-normal ${location.pathname === '/stellen' ? 'border-b-2 md:border-b-4 border-white' : ''}`}
+                   >
+                     OFFENE STELLEN
+                   </Link>
+                 </div>
+         
+                 <div className="h-px bg-gray-500 mt-0 w-full md:w-[1250px]"></div>
+               </div>
 
       <div className="flex flex-col items-center min-h-screen text-white bg-[#003049]">
         {/* Search Form Section */}
         <div className="w-full max-w-6xl flex space-x-10 items-center mt-20 mb-16">
           {/* Input with Search Icon on the Right */}
-          <div className="relative w-[1700px] h-[50px]">
+          <div className="relative w-[2500px] h-[50px]">
             <input
               type="text"
               placeholder="Job titel"
@@ -67,7 +66,7 @@ const OffeneStellen = () => {
           </div>
 
           {/* Select Fields */}
-          <div className="relative w-[800px] h-[50px]">
+          <div className="relative w-[1200px] h-[50px]">
             <select className="p-4 pl-6 text-gray-400 bg-transparent border border-white   rounded-full w-full h-full focus:outline-none appearance-none pr-12  leading-none">
               <option className="bg-[#003049] text-gray-400">Temporär</option>
               <option className="bg-[#003049] text-gray-400  ">Festanstellung</option>
@@ -79,7 +78,7 @@ const OffeneStellen = () => {
             />
           </div>
 
-          <div className="relative w-[800px] h-[50px]">
+          <div className="relative w-[1200px] h-[50px]">
             <select className="p-4 pl-6 text-gray-400 bg-transparent border border-white rounded-full w-full h-full focus:outline-none appearance-none pr-12 leading-none">
               <option className="bg-[#003049] text-gray-400">Ort & Radius</option>
               <option className="bg-[#003049] text-gray-400">5 km</option>
@@ -94,7 +93,7 @@ const OffeneStellen = () => {
           </div>
 
           {/* Search Button */}
-          <button className="bg-white text-[#003049] rounded-full w-[800px] h-[50px]">
+          <button className="bg-white text-[#003049] rounded-full w-[1000px] h-[50px]">
           Suchen
           </button>
         </div>
@@ -119,9 +118,9 @@ const OffeneStellen = () => {
               </div>
               <button
                 onClick={() => navigate('/bewerbenbutton')} // Navigate to the Bewerben page
-                className="bg-white text-[#003049] px-6 py-2 rounded-full w-[120px] h-[45px] font-semibold mr-10"
+                className="bg-white text-[#003049] px-6 py-2 rounded-full w-[140px] h-[45px] font-semibold mr-10"
               >
-                APPLY
+                BEWERBEN
               </button>
             </div>
           ))}
