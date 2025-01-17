@@ -268,6 +268,81 @@ const HomePage = () => {
 </div>
 
   </div>
+  <div className="bg-[#003049] text-white py-16">
+  {/* Title Section */}
+  <div className="flex items-center justify-center mb-12">
+    <div className="flex-grow border-t border-white mx-20"></div> {/* Increased horizontal margin */}
+    <h2 className="text-center text-3xl md:text-4xl tracking-wide">UNSERE UNTERNEHMEN</h2>
+    <div className="flex-grow border-t border-white mx-20"></div> {/* Increased horizontal margin */}
+  </div>
+
+ {/* Boxes Section */}
+ <div className="flex flex-nowrap justify-center items-center p-6 overflow-x-auto">
+        {/* First Box */}
+        <div className="p-4 text-center -mt-4">
+          <div className="text-6xl mb-4">
+            <a href="https://ketajob.ch">
+              <img
+                src={require("../Assets/kt1.png")}
+                className="mx-auto hover:scale-110 transition-transform duration-300"
+                alt="home Icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Vertical Line */}
+        <div className="h-44 -mb-4 w-px bg-white mx-2"></div>
+
+        {/* Second Box */}
+        <div className="p-4 text-center -mt-4">
+          <div className="text-6xl mb-4">
+            <a href="https://www.instagram.com/keta.promo/">
+              <img
+                src={require("../Assets/Screenshot 2025-01-03 144101.png")}
+                className="mx-auto hover:scale-110 transition-transform duration-300"
+                alt="building Icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Vertical Line */}
+        <div className="h-44 -mb-4 w-px bg-white mx-2"></div>
+
+        {/* Third Box */}
+        <div className="p-4 text-center">
+          <div className="text-6xl mb-4">
+            <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
+              <img
+                src={require("../Assets/kt3.png")}
+                className="mx-auto hover:scale-110 transition-transform duration-300"
+                alt="grow Icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Vertical Line */}
+        <div className="h-44 -mb-4 w-px bg-white mx-2"></div>
+
+        {/* Fourth Box */}
+        <div className="p-4 text-center">
+          <div className="text-6xl mb-4">
+            <a href="https://ketacoin.io/">
+              <img
+                src={require("../Assets/kt4.png")}
+                className="mx-auto hover:scale-110 transition-transform duration-300"
+                alt="Alarm Icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+</div>
+
 </div>
 
   
