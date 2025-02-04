@@ -13,19 +13,19 @@ const Page3 = () => {
   {/* Title Section */}
   <div className="flex flex-col items-center justify-center mb-12 px-4">
     <div className="flex items-center w-full">
-      <div className="flex-grow border-t border-white"></div>
+      <div className="flex-grow border-t border-white md:ml-[63px]"></div>
       <div className="px-4">
         <h2 className="text-center text-2xl md:text-4xl whitespace-nowrap md:whitespace-normal">
           <span className="block md:inline">UNSERE</span>{" "}
           <span className="block md:inline">DIENSTLEISTUNGEN</span>
         </h2>
       </div>
-      <div className="flex-grow border-t border-white"></div>
+      <div className="flex-grow border-t border-white md:mr-[67px]"></div>
     </div>
   </div>
 
   {/* Content Boxes */}
-  <div className="space-y-16 px-4 md:px-8">
+  <div className="space-y-16 px-4 md:px-20 md:pt-8">
     {/* Box 1 */}
     <div className="relative bg-[#003049] text-white rounded-lg p-6 shadow-lg border border-white">
       <div className="flex justify-center -mt-14">

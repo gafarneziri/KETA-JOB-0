@@ -12,8 +12,25 @@ function Footer() {
           <div className="flex flex-col justify-center items-center md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
             {/* Left Section - Logo */}
             <div className="flex-shrink-0 flex justify-center">
-              <img src={Logo} alt="Keta Job Logo" className="h-[70px] sm:h-[90px] object-contain" />
-            </div>
+  <a 
+    href="/" 
+    onClick={(e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1000);  // Adjust this time based on your scroll speed
+    }}
+  >
+    <img 
+      src={Logo} 
+      alt="Keta Job Logo" 
+      className="h-[70px] sm:h-[90px] object-contain" 
+    />
+  </a>
+</div>
+
+
 
             {/* Center Section - Social Links */}
             <div className="flex justify-center space-x-6 sm:space-x-8">

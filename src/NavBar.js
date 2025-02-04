@@ -20,7 +20,7 @@ function NavBar() {
         bg-[#003049] md:bg-white 
         md:overflow-visible"
       >
-        <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 h-18 relative">
+        <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 h-18">
           {/* Left Side - Logo */}
           <div className="flex-shrink-0 my-[10px]">
             <Link to="/">
@@ -28,12 +28,12 @@ function NavBar() {
               <img
                 src={WhiteLogo}
                 alt="White Logo"
-                className="w-[90px] h-[50px] object-cover md:hidden"
+                className="w-[90px] h-[50px] object-cover md:hidden mt-[7px] "
               />
               <img
                 src={require('./Assets/Group 19.png')}
                 alt="Logo"
-                className="hidden md:block w-[116px] h-[65px] object-cover"
+                className="hidden md:block w-[116px] h-[65px] object-cover mt-[7px]"
               />
             </Link>
             <div className="absolute left-0 top-full w-screen h-[4px] bg-[#002638]"></div>
