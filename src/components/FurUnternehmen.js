@@ -58,8 +58,8 @@ const FurUnternehmen = () => {
         <div className="flex items-center mb-4">
           {/* Left Line */}
           <hr
-            className="border-t-2 border-gray-500  md:hidden"
-            style={{ width: '51px' }}
+            className="border-t-1 border-white  mr-2 md:hidden"
+            style={{ width: '40px' }}
           />
           <hr
             className="border-t-2 border-gray-500 hidden md:block mr-4"
@@ -67,14 +67,15 @@ const FurUnternehmen = () => {
           />
 
           {/* Title */}
-          <span className="text-white uppercase text-[22px] md:text-[40px] font-Montserrat font-normal  text-center">
-            UNSERE PROFESSIONELLEN DIENSTLEISTUNGEN
+          <span className="text-white uppercase text-[22px] md:text-[40px] font-Montserrat font-normal text-center flex flex-col sm:inline">
+            UNSERE <span className="block sm:inline">PROFESSIONELLEN</span> DIENSTLEISTUNGEN
           </span>
+
 
           {/* Right Line */}
           <hr
-            className="border-t-2 border-gray-500  md:hidden"
-            style={{ width: '51px' }}
+            className="border-t-1 border-white ml-2  md:hidden"
+            style={{ width: '40px' }}
           />
           <hr
             className="border-t-2 border-gray-500 hidden md:block ml-4"
@@ -83,13 +84,14 @@ const FurUnternehmen = () => {
         </div>
 
 
-        <p className="text-white text-left text-[12px] md:text-[28px] px-4 font-Montserrat mx-6 mt-6 md:mt-10">
+        <p className="text-white text-left text-[12px] md:text-[28px] px-4 md:px-20 lg:px-[49.5px] font-Montserrat mx-6 mt-6 md:mt-10">
           Während Sie sich um Ihre Kunden kümmern, setzen wir uns mit Leidenschaft dafür ein, dass Ihr Unternehmen gut betreut und mit qualifiziertem Personal ausgestattet ist. Ursprünglich auf die Personalvermittlung und das Personalverleih im Gesundheitswesen spezialisiert, bieten wir aufgrund der wachsenden Nachfrage inzwischen Fachkräfte für verschiedene Branchen an.
           <br /><br />
           Unser Hintergrund im Gesundheitswesen hat uns gelehrt, dass alles, was gesund ist, eine Zukunft hat, und wir glauben, dass die Gesundheit Ihres Unternehmens entscheidend ist. Wenn Ihnen Fachkräfte fehlen, wenden Sie sich einfach an uns. Mit unserer Erfahrung und Kompetenz finden wir schnell die richtige Person für Sie.
           <br /><br />
           Wir bieten Ihnen Top-Kandidaten in den folgenden Fachbereichen:
         </p>
+
       </div>
 
       <div className="bg-[#003049] flex flex-col items-center pb-16">

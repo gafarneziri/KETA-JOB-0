@@ -209,7 +209,7 @@ const HomePage = () => {
                 </p>
 
                 <button
-                  onClick={() => navigate('/bewerber')}
+                  onClick={() => navigate('/unternehmen')}
                   className="flex items-center justify-center mx-auto bg-gray-800 text-white md:h-auto md:w-auto h-[26.71px] w-[126.46px] rounded-full md:text-base text-[14.99px] px-6 py-2 hover:bg-gray-700 whitespace-nowrap transition duration-200"
                 >
                   LERNE MEHR

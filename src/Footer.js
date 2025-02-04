@@ -32,18 +32,32 @@ function Footer() {
             <div className="text-xs sm:text-sm text-center space-y-2 sm:space-y-1">
               <div className="block md:hidden">
                 <p className="font-semibold">EMAIL :</p>
-                <p className="underline">INFO@KETAJOB.CH</p>
+                <a href="mailto:INFO@KETAJOB.CH" className="underline hover:text-blue-500">
+                  INFO@KETAJOB.CH
+                </a>
                 <p className="font-semibold mt-4">MOBIL :</p>
-                <p>+41 41 252 18 18</p>
-                <p>+41 41 252 18 19</p>
+                <a href="tel:+41412521818" className="block hover:underline">
+                  +41 41 252 18 18
+                </a>
+                <a href="tel:+41412521819" className="block hover:underline">
+                  +41 41 252 18 19
+                </a>
               </div>
+
               <div className="hidden md:block">
                 <p className="font-semibold">MOBIL :</p>
-                <p>+41 41 252 18 18</p>
-                <p>+41 41 252 18 19</p>
+                <a href="tel:+41412521818" className="block hover:underline">
+                  +41 41 252 18 18
+                </a>
+                <a href="tel:+41412521819" className="block hover:underline">
+                  +41 41 252 18 19
+                </a>
                 <p className="font-semibold mt-4">EMAIL :</p>
-                <p className="underline">INFO@KETAJOB.CH</p>
+                <a href="mailto:INFO@KETAJOB.CH" className="underline hover:text-blue-500">
+                  INFO@KETAJOB.CH
+                </a>
               </div>
+
             </div>
           </div>
 
@@ -78,11 +92,26 @@ function Footer() {
 
         <div className="container mx-auto sm:block hidden  px-4 sm:px-6 lg:px-20">
           {/* Footer Bottom */}
-          <div className="mt-4 flex flex-row justify-center items-center text-[10px] sm:text-xs text-gray-600 gap-[260px] text-center  ">
+          <div className="mt-4 flex flex-row justify-center items-center text-[10px] sm:text-xs text-gray-600 gap-[260px] text-center">
             <p>© 2024 KETA GROUP, ALL RIGHTS RESERVED</p>
-            <p>OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ</p>
-            <p>BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ</p>
+            <a
+              href="https://www.google.com/maps/place/Othmarstrasse+8,+8008+Zürich,+Switzerland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ
+            </a>
+            <a
+              href="https://www.google.com/maps/place/Birkenstrasse+47,+6343+Rotkreuz,+Switzerland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ
+            </a>
           </div>
+
 
         </div>
       </footer>

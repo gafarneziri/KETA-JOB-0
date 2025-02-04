@@ -34,9 +34,9 @@ const Bewerben = () => {
           {/* Centered Title on Image */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex items-center mt-6 md:mt-0 justify-center w-full">
-              <hr className="border-t-2 border-white w-[140px] md:w-[480px]" />
+              <hr className="border-t-2 border-white w-[110px] md:w-[480px]" />
               <p className="font-Montserrat text-[22px] sm:text-[70px] mx-2 sm:mx-4  text-white whitespace-nowrap">BEWERBEN</p>
-              <hr className="border-t-2 border-white w-[140px] md:w-[480px]" />
+              <hr className="border-t-2 border-white w-[110px] md:w-[480px]" />
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Bewerben = () => {
         {/* Lower Section with Subtitle and Text Content */}
         <div className="bg-[#003049] py-8 md:py-16 px-6">
           <div className="flex items-center justify-center mb-8">
-            <hr className="border-t-2 border-white w-[120px] md:w-[420px]" />
+            <hr className="border-t-2 border-white w-[120px] md:w-[380px]" />
             <span
               className="text-white  text-center uppercase text-[22px] sm:text-[40px] whitespace-nowrap sm:whitespace-normal font-Montserrat font-normal mx-6 md:mx-8"
             >
@@ -52,11 +52,11 @@ const Bewerben = () => {
               <span className="block sm:inline"> SICH JETZT</span>
             </span>
 
-            <hr className="border-t-2 border-white w-[120px] md:w-[420px]" />
+            <hr className="border-t-2 border-white w-[120px] md:w-[380px]" />
           </div>
 
           {/* Text Content Below Subtitle */}
-          <div className="text-left md:max-w-4xl text-[10px] md:text-[22px] leading-relaxed md:pl-8 md:pt-8">
+          <div className="text-left md:max-w-4xl text-[10px] md:text-[22px] lg:px-[45px] leading-relaxed md:pl-8 md:pt-8">
             <p className="whitespace-normal md:whitespace-nowrap">
               Wir freuen uns darauf, Ihnen zu helfen, den perfekten Job zu finden, der zu Ihren Fähigkeiten und Ambitionen passt.
             </p>
