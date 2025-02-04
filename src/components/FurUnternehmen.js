@@ -93,47 +93,46 @@ const FurUnternehmen = () => {
       </div>
 
       <div className="bg-[#003049] flex flex-col items-center pb-16">
-      <div className="Box grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-[80px] py-6">
-  {/* Box Components */}
-  {[
-    { img: Medical, title: 'MEDICAL' },
-    { img: Kader, title: 'KADER HÖHERE ANGESTELLTE' },
-    { img: Diens, title: 'DIENSTLEISTUNGS BERUFE' },
-    { img: Bank, title: 'BANK UND VERSICHERUNGSWESEN' },
-    { img: It, title: 'IT, WERBUNG, GRAFIK, MARKETING' },
-    { img: Teknika, title: 'TECHNISCHE BERUFE' },
-    { img: Kauf, title: 'KAUFMÄNNISCHE BERUFE' },
-    { img: Verka, title: 'VERKAUFSBERUFE' }
-  ].map((box, index) => (
-    <Link
-      key={index}
-      to="/anfrageformular"
-      className="relative bg-[#003049] text-white rounded-2xl p-4 md:p-6 w-[158.69px] md:w-[280px] h-[175.32px] md:h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300"
-    >
-      <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white transform hover:-translate-y-2 transition duration-300">
-        <img
-          src={box.img}
-          alt={`${box.title} Logo`}
-          className="h-12 w-12 md:h-14 md:w-14 hover:text-[#003049]"
-        />
-      </div>
-      <h2
-        className={`text-center text-[13.45px] md:text-xl font-semibold mt-8 md:mt-10 ${
-          box.title === 'BANK UND VERSICHERUNGSWESEN' ? 'break-word' : ''
-        }`}
-        style={
-          box.title === 'BANK UND VERSICHERUNGSWESEN'
-            ? { wordBreak: 'break-word', hyphens: 'auto' }
-            : {}
-        }
-      >
-        {box.title === 'BANK UND VERSICHERUNGSWESEN'
-          ? 'BANK UND VERSICHERUNG-\nSWESEN'
-          : box.title}
-      </h2>
-    </Link>
-  ))}
-</div>
+        <div className="Box grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-[80px] py-6">
+          {/* Box Components */}
+          {[
+            { img: Medical, title: 'MEDICAL' },
+            { img: Kader, title: 'KADER HÖHERE ANGESTELLTE' },
+            { img: Diens, title: 'DIENSTLEISTUNGS BERUFE' },
+            { img: Bank, title: 'BANK UND VERSICHERUNGSWESEN' },
+            { img: It, title: 'IT, WERBUNG, GRAFIK, MARKETING' },
+            { img: Teknika, title: 'TECHNISCHE BERUFE' },
+            { img: Kauf, title: 'KAUFMÄNNISCHE BERUFE' },
+            { img: Verka, title: 'VERKAUFSBERUFE' }
+          ].map((box, index) => (
+            <Link
+              key={index}
+              to="/anfrageformular"
+              className="relative bg-[#003049] text-white rounded-2xl p-4 md:p-6 w-[158.69px] md:w-[280px] h-[175.32px] md:h-[330px] shadow-lg border-4 border-white flex flex-col items-center justify-center hover:bg-white hover:text-[#003049] transition duration-300"
+            >
+              <div className="absolute -top-7 bg-[#003049] p-2 rounded-full border-white transform hover:-translate-y-2 transition duration-300">
+                <img
+                  src={box.img}
+                  alt={`${box.title} Logo`}
+                  className="h-12 w-12 md:h-14 md:w-14 hover:text-[#003049]"
+                />
+              </div>
+              <h2
+                className={`text-center text-[13.45px] md:text-xl font-semibold mt-8 md:mt-10 ${box.title === 'BANK UND VERSICHERUNGSWESEN' ? 'break-word' : ''
+                  }`}
+                style={
+                  box.title === 'BANK UND VERSICHERUNGSWESEN'
+                    ? { wordBreak: 'break-word', hyphens: 'auto' }
+                    : {}
+                }
+              >
+                {box.title === 'BANK UND VERSICHERUNGSWESEN'
+                  ? 'BANK UND VERSICHERUNG-\nSWESEN'
+                  : box.title}
+              </h2>
+            </Link>
+          ))}
+        </div>
 
       </div>
     </div>

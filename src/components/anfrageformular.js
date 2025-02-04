@@ -58,7 +58,7 @@ function Anfrageformular() {
     <div className="min-h-screen bg-[#003049] flex justify-center items-center py-12">
       <Link
         to="/unternehmen"
-        className="absolute top-28 top-8  left-4 text-white text-[40px] hover:text-gray-300 transition block md:top-44 md:left-16 md:text-[50px]"
+        className="absolute top-[115px] top-8  left-4 text-white text-[40px] hover:text-gray-300 transition block md:top-44 md:left-16 md:text-[50px]"
         style={{ transform: 'scaleY(1.7)', lineHeight: '1' }}
       >
         &lt;
@@ -241,7 +241,7 @@ function Anfrageformular() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Weitere Informationen hinzufügen"
-              className="w-[303px] h-[150px] p-4 border text-[8.63px] border-gray-300 rounded-[20px] h-32"
+              className="w-[303px] h-[150px] p-4 border text-[8.63px]  border-gray-300 rounded-[20px] h-32"
             />
           </div>
 

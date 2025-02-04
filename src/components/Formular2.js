@@ -89,7 +89,7 @@ const Formular2 = () => {
       {/* Back Arrow */}
       <Link
               to="/bewerber"
-              className="absolute top-28 top-8  left-4 text-white text-[40px] hover:text-gray-300 transition block md:top-44 md:left-16 md:text-[50px]"
+              className="absolute top-[115px] top-8  left-4 text-white text-[40px] hover:text-gray-300 transition block md:top-44 md:left-16 md:text-[50px]"
               style={{ transform: 'scaleY(1.7)', lineHeight: '1' }}
             >
               &lt;
@@ -274,13 +274,13 @@ const Formular2 = () => {
 
         {/* Mitteilung Section */}
         <div className="ml-2 md:mb-10 -ml-[20px]  md:-ml-0  mt-6 md:mt-0">
-          <label className="block text-[#003049]  mb-2">Mitteilung</label>
+          <label className="block text-[#003049] -ml-[30px] md:-ml-0  mb-4 md:mb-4 md:mb-2">Mitteilung</label>
           <textarea
             name="mitteilung"
             value={formData.mitteilung}
             onChange={handleInputChange}
             placeholder="Weitere Informationen hinzufügen"
-            className="w-[303px] h-[150px] md:w-[480px] md:h-32 p-4 border border-gray-300 rounded-[20px]"
+            className="w-[303px] h-[150px] md:w-[480px] md:h-32 -ml-[35px] md:-ml-0 p-4 border border-gray-300 rounded-[20px]"
           ></textarea>
         </div>
         <div className="flex items-center md:-mt-8 space-x-4 mb-16 ml-2 mt-4 md:mt-0">
