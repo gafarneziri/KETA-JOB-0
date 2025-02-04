@@ -12,13 +12,15 @@ import Kontakt from './components/Kontakt';
 import Bewerben from './components/Bewerben';
 import Anfrageformular from './components/anfrageformular';
 import Formular2 from './components/Formular2';
-
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
     <Router>
+       <ScrollToTopButton />
       <NavBar />
       <Routes>
+         
         <Route path="/" element={<HomePage />} />
         <Route path="/unsere" element={<UNSEREDIENSTLEISTUNGEN/>} />
         <Route path="/unternehmen" element={<FurUnternehmen />} />
