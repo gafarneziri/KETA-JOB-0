@@ -63,7 +63,9 @@ const Uberuns = () => {
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
-            <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
+            <a href="tel:+41412521818" className="text-sm ">
+              +41 41 252 18 18
+            </a>
           </div>
         </div>
 

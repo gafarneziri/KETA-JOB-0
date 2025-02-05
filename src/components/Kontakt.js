@@ -55,7 +55,7 @@ const Page5 = () => {
         <img
           src={Kontakt}
           alt="kontakt"
-          className="w-full md:w-full h-[117px] md:h-[400px] sm:h-auto object-cover"
+          className="w-full md:w-full h-[117.31px] md:h-[400px] sm:h-auto object-cover"
         />
 
         {/* Centered Title on Image */}

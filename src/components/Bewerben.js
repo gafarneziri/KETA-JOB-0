@@ -28,7 +28,7 @@ const Bewerben = () => {
           <img
             src={Kontakt}
             alt="kontakt"
-            className="w-full h-[150px] sm:h-auto object-cover"
+            className="w-full h-[117.31px] sm:h-auto object-cover"
           />
 
           {/* Centered Title on Image */}
@@ -77,7 +77,7 @@ const Bewerben = () => {
 
             {/* Personal Information Section */}
             <div className="flex flex-col  mb-12">
-              <h3 className="text-[#003049] text-[18px] -ml-12 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
+              <h3 className="text-[#003049] text-[18px] -ml-14 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
               <div className="grid grid-cols-1 md:grid-cols-2  gap-y-[2px] md:gap-y-6 gap-x-24 w-2/3 mx-auto">
                 <div className="flex flex-col mt-4">
                   <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[27.28px]">Vorname</label>
@@ -229,7 +229,7 @@ const Bewerben = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="w-2/3 mx-auto">
+            <div className="w-2/3 mx-auto flex md:justify-start justify-center">
               <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[155px] md:w-[388.21px] h-[32px] md:h-[72.71px] text-[10px] md:text-[27.05px] text-center whitespace-nowrap flex items-center justify-center">
                 BEWERBUNG SENDEN
               </button>
