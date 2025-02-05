@@ -14,21 +14,21 @@ const Uberuns = () => {
         <img
           src={Uberuns1}
           alt="uberuns"
-          className="w-full h-[200px] sm:h-auto object-cover"
+          className="w-full md:w-full h-[112px] md:h-[400px] sm:h-auto object-cover"
         />
 
         {/* Centered Title on Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center justify-center w-full">
-            <hr className="border-t-2 border-white w-2/6" />
+            <hr className="border-t-2 border-white w-[100px] md:w-2/6" />
             <p className="font-Montserrat text-[22px] sm:text-[70px] mx-2 sm:mx-4 whitespace-nowrap">ÜBER UNS</p>
-            <hr className="border-t-2 border-white w-2/6" />
+            <hr className="border-t-2 border-white w-[100px] md:w-2/6" />
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="relative z-10 flex flex-col items-center text-center py-8 sm:py-16 px-2 sm:px-4">
+      <div className="relative z-10 flex flex-col items-center text-center py-8 sm:py-16 px-[30px] sm:px-4  lg:px-[52px]">
         <p className="text-white text-left text-[10px] sm:text-lg mt-4 sm:mt-8 sm:text-[28px] leading-relaxed">
           So denken und handeln wir: Menschen sehen wir nie nur als Kostenfaktoren. Vielmehr sind es die richtigen Mitarbeiter, die für einen gesunden Betrieb sorgen.
           <br /><br />
@@ -41,6 +41,8 @@ const Uberuns = () => {
           Wir leisten gerne einen Sondereinsatz, damit Ihr Betrieb auf Hochtouren laufen kann. Wir legen einen großen Wert auf faire Löhne und Arbeitsbedingungen sowie ein vertrauensvolles Miteinander. Das zählt sich langfristig für alle aus.
         </p>
       </div>
+
+
 
       {/* Profiles Section */}
       <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 py-8 sm:py-10 space-y-8 sm:space-y-0 px-2 sm:px-4">
@@ -61,7 +63,9 @@ const Uberuns = () => {
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
-            <a href="tel:+41412521818" className="text-sm">+41 41 252 18 18</a>
+            <a href="tel:+41412521818" className="text-sm ">
+              +41 41 252 18 18
+            </a>
           </div>
         </div>
 

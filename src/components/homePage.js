@@ -1,5 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import KetaPromologo from '../Assets/ketapromoicon.svg';
+import KetaRealEstatelogo from '../Assets/ketaestate1.svg';
+import KetaAGlogo from '../Assets/ketaagicon.svg';
+import KetaCoinicon from '../Assets/ketacoinicon.svg';
 
 
 const HomePage = () => {
@@ -209,7 +213,7 @@ const HomePage = () => {
                 </p>
 
                 <button
-                  onClick={() => navigate('/bewerber')}
+                  onClick={() => navigate('/unternehmen')}
                   className="flex items-center justify-center mx-auto bg-gray-800 text-white md:h-auto md:w-auto h-[26.71px] w-[126.46px] rounded-full md:text-base text-[14.99px] px-6 py-2 hover:bg-gray-700 whitespace-nowrap transition duration-200"
                 >
                   LERNE MEHR
@@ -397,7 +401,7 @@ const HomePage = () => {
                     navigate('/kontakt');
                     window.scrollTo(0, 0);
                   }}
-                  className="flex items-center justify-center mt-4 -ml-6 md:hidden bg-[#003049] w-[141.49px] md:w-auto md:h-auto h-[24px] text-white whitespace-nowrap text-[8px] md:text-base px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit"
+                  className="flex items-center justify-center mt-4 -ml-6 md:hidden bg-[#003049] w-[143px] md:w-auto md:h-auto h-[24px] text-white whitespace-nowrap text-[8px] md:text-base px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit"
                 >
                   KONTAKTIEREN SIE UNS
                 </button>
@@ -485,50 +489,50 @@ const HomePage = () => {
           </div>
 
           <div className="block md:hidden grid grid-cols-2 gap-4 justify-center px-8 items-center pl-12">
-  {/* First Box */}
-  <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
-    <a href="https://ketajob.ch">
-      <img
-        src={require("../Assets/andi.svg")}
-        alt="Box 1"
-        className="w-full h-full object-contain rounded-lg"
-      /> 
-    </a>
-  </div>
+            {/* First Box */}
+            <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg ">
+              <a href="https://ketajob.ch">
+                <img
+                  src={KetaPromologo}
+                  alt="Box 1"
+                  className="object-contain rounded-lg"
+                />
+              </a>
+            </div>
 
-  {/* Second Box */}
-  <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
-    <a href="https://www.instagram.com/keta.promo/">
-      <img
-        src={require("../Assets/almir.svg")}
-        alt="Box 2"
-        className="w-full h-full object-contain rounded-lg"
-      /> 
-    </a>
-  </div>
+            {/* Second Box */}
+            <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
+              <a href="https://www.instagram.com/keta.promo/">
+                <img
+                  src={KetaRealEstatelogo}
+                  alt="Box 1"
+                  className="object-contain rounded-lg"
+                />
+              </a>
+            </div>
 
-  {/* Third Box */}
-  <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-2xl">
-    <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
-      <img
-        src={require("../Assets/keta3.png")}
-        alt="Box 3"
-        className="w-full h-full object-contain rounded-lg"
-      /> 
-    </a>
-  </div>
+            {/* Third Box */}
+            <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-2xl">
+              <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
+              <img
+                  src={KetaAGlogo}
+                  alt="Box 1"
+                  className="object-contain rounded-lg"
+                />
+              </a>
+            </div>
 
-  {/* Fourth Box */}
-  <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
-    <a href="https://ketacoin.io/">
-      <img
-        src={require("../Assets/keta4.png")}
-        alt="Box 4"
-        className="w-full h-full object-contain rounded-lg"
-      /> 
-    </a>
-  </div>
-</div>
+            {/* Fourth Box */}
+            <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
+              <a href="https://ketacoin.io/">
+              <img
+                  src={KetaCoinicon}
+                  alt="Box 1"
+                  className="object-contain rounded-lg"
+                />
+              </a>
+            </div>
+          </div>
 
 
 

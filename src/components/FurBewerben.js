@@ -60,8 +60,8 @@ const FurBewerben = () => {
         <div className="flex items-center mb-4">
           {/* Left Line */}
           <hr
-            className="border-t-2 border-gray-500 md:hidden"
-            style={{ width: '51px' }}
+            className="border-t-1 border-gray-white mr-2 md:hidden"
+            style={{ width: '40px' }}
           />
           <hr
             className="border-t-2 border-gray-500 hidden md:block mr-4"
@@ -69,14 +69,14 @@ const FurBewerben = () => {
           />
 
           {/* Title */}
-          <span className="text-white uppercase text-[22px] md:text-[40px] font-Montserrat font-normal text-center">
-            UNSERE PROFESSIONELLEN DIENSTLEISTUNGEN
+          <span className="text-white uppercase text-[22px] md:text-[40px] font-Montserrat font-normal text-center flex flex-col sm:inline">
+            UNSERE <span className="block sm:inline">PROFESSIONELLEN</span> DIENSTLEISTUNGEN
           </span>
 
           {/* Right Line */}
           <hr
-            className="border-t-2 border-gray-500 md:hidden"
-            style={{ width: '51px' }}
+            className="border-t-1 border-gray-white ml-2 md:hidden"
+            style={{ width: '40px' }}
           />
           <hr
             className="border-t-2 border-gray-500 hidden md:block ml-4"
@@ -84,7 +84,7 @@ const FurBewerben = () => {
           />
         </div>
 
-        <p className="text-white text-left text-[12px] md:text-[28px] px-4 font-Montserrat mx-6 mt-6 md:mt-10">
+        <p className="text-white text-left text-[12px] md:text-[28px] lg:px-[57px] px-4 font-Montserrat mx-6 mt-6 md:mt-10">
           Wir bringen Sie leidenschaftlich mit den besten Karrieremöglichkeiten in Verbindung. Ursprünglich auf das Gesundheitswesen spezialisiert, haben wir unser Angebot auf verschiedene Branchen ausgeweitet.
           Ihre berufliche Entwicklung ist uns wichtig. Kontaktieren Sie uns, um schnell die passende Stelle für Ihren nächsten Karriereschritt zu finden.
           <br /><br />

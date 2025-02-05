@@ -55,15 +55,19 @@ const Page5 = () => {
         <img
           src={Kontakt}
           alt="kontakt"
-          className="w-full h-[200px] sm:h-auto object-cover"
+          className="w-full md:w-full h-[117.31px] md:h-[400px] sm:h-auto object-cover"
         />
 
         {/* Centered Title on Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center justify-center w-full">
-            <hr className="border-t-2 border-white w-1/6" />
-            <p className="font-Montserrat text-[22px] sm:text-[70px] mx-2 sm:mx-4  text-white whitespace-nowrap">KONTAKTIEREN SIE UNS</p>
-            <hr className="border-t-2 border-white w-1/6" />
+            <hr className="border-t-2 border-white w-[76px] md:w-1/6" />
+            <p className="font-Montserrat text-center text-[22px] sm:text-[70px] mx-2 sm:mx-4 text-white whitespace-nowrap">
+              <span className="block sm:inline">KONTAKTIEREN</span>
+              <span className="block sm:inline sm:ml-2">SIE UNS</span>
+            </p>
+
+            <hr className="border-t-2 border-white w-[76px] md:w-1/6" />
           </div>
         </div>
       </div>
@@ -112,7 +116,7 @@ const Page5 = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="EMAIL"
-                     className="w-full bg-transparent w-[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
+                  className="w-full bg-transparent w-[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
                 />
               </div>
             </div>
@@ -127,7 +131,7 @@ const Page5 = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="E.G. +1300..."
-                   className="w-full bg-transparent w-[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
+                  className="w-full bg-transparent w-[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
                 />
               </div>
               <div>
@@ -139,12 +143,12 @@ const Page5 = () => {
                   value={formData.location}
                   onChange={handleInputChange}
                   placeholder="ORT"
-                    className="w-full bg-transparent w[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
+                  className="w-full bg-transparent w[351px]  md:w-[350px] h-[33px] md:h-[60px] border border-white p-3 rounded-[272.13px]  placeholder-white placeholder-opacity-50"
                 />
               </div>
             </div>
 
-            <div className='  md:-ml-[150px]'>
+            <div className='-ml-2  md:-ml-[150px]'>
               <label htmlFor="message" className="block mb-2">Mitteilung</label>
               <textarea
                 id="message"
