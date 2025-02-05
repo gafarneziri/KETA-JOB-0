@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
     isVisible && (
       <div
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 p-4  bg-[#003049] text-white  rounded-full cursor-pointer shadow-xl hover:bg-blue-900"
+        className="fixed bottom-8 right-8 flex items-center justify-center w-16 h-16 bg-[#003049] text-white rounded-full  shadow-xl hover:bg-blue-900"
         style={{ display: isVisible ? 'block' : 'none' }}
       >
         <svg
@@ -35,7 +35,7 @@ const ScrollToTopButton = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-8 h-8"
+          className="w-8  ml-4 h-20 pb-[5px]  cursor-pointer" // Ensure cursor-pointer is added here
         >
           <path
             strokeLinecap="round"

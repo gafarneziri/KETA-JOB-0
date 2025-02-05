@@ -20,7 +20,7 @@ function NavBar() {
         bg-[#003049] md:bg-white 
         md:overflow-visible"
       >
-        <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 h-18">
+        <div className="flex justify-between items-center px-4 md:px-10 lg:px-20 h-18 relative">
           {/* Left Side - Logo */}
           <div className="flex-shrink-0 my-[10px]">
             <Link to="/">
