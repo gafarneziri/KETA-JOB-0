@@ -176,31 +176,50 @@ const Page5 = () => {
 
           {/* Contact Information Section */}
           <div className="flex flex-row md:flex-col   gap-[50px] md:gap-4 text-lg">
-            <div className='ml-2 md:ml-0  pt-18 md:mt-6 flex flex-col  '>
-              <div>
-                <p className="">Mobil :</p>
-                <p>+41 41 252 18 18</p>
-                <p>+41 41 252 18 19</p>
-              </div>
-              <div className="mt-4">
-                <p className="">Email :</p>
-                <p>info@ketajob.ch</p>
-              </div>
-            </div>
+          <div className='ml-2 md:ml-0 pt-18 md:mt-6 flex flex-col'>
+  <div>
+    <p className="">Mobil :</p>
+    <a href="tel:+41412521818">
+      <p>+41 41 252 18 18</p>
+    </a>
+    <a href="tel:+41412521819">
+      <p>+41 41 252 18 19</p>
+    </a>
+  </div>
+  <div className="mt-4">
+    <p className="">Email :</p>
+    <a href="mailto:info@ketajob.ch">
+      <p>info@ketajob.ch</p>
+    </a>
+  </div>
+</div>
+
 
 
             <div className="mt-8 flex flex-col  gap-4">
               <div className="flex items-center gap-4">
-                <img src={require('../Assets/facebook.png')} alt="Facebook Icon" className="w-8 h-8" />
+                <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
+                  <img src={require('../Assets/facebook.png')} alt="Facebook Icon" className="w-8 h-8" />
+                </a>
+                <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
                 <p>@ketajob</p>
+                </a>
               </div>
               <div className="flex items-center gap-4">
-                <img src={require('../Assets/instagram1.png')} alt="Instagram Icon" className="w-8 h-8" />
+                <a href="https://www.instagram.com/ketajob.ch/">
+                  <img src={require('../Assets/instagram1.png')} alt="Instagram Icon" className="w-8 h-8" />
+                </a>
+                <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
                 <p>@ketajob</p>
+                </a>
               </div>
               <div className="flex items-center gap-4">
-                <img src={require('../Assets/in.png')} alt="LinkedIn Icon" className="w-8 h-8" />
+                <a href="https://www.linkedin.com/company/101913576/admin/dashboard/">
+                  <img src={require('../Assets/in.png')} alt="LinkedIn Icon" className="w-8 h-8" />
+                </a>
+                <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
                 <p>@ketajob</p>
+                </a>
               </div>
             </div>
           </div>

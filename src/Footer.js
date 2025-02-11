@@ -1,8 +1,8 @@
 import React from 'react';
-import LinkedInIcon from "./Assets/inblue.png";
-import FacebookIcon from "./Assets/fbblue.png";
-import InstagramIcon from "./Assets/instablue.png";
-import Logo from "./Assets/ketajoblogo.png";
+import LinkedInIcon from "./Assets/linkedin.svg";
+import FacebookIcon from "./Assets/facebook.svg";
+import InstagramIcon from "./Assets/insta.svg";
+import Logo from "./Assets/logofooter.svg";
 
 function Footer() {
   return (
@@ -34,13 +34,13 @@ function Footer() {
 
             {/* Center Section - Social Links */}
             <div className="flex justify-center space-x-6 sm:space-x-8">
-              <a href="https://www.linkedin.com/company/keta-real-estate/posts/?feedView=all">
+              <a href="https://www.linkedin.com/company/101913576/admin/dashboard/">
                 <img src={LinkedInIcon} alt="LinkedIn" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
-              <a href="https://www.facebook.com/ketarealestate1?_rdr">
+              <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
                 <img src={FacebookIcon} alt="Facebook" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
-              <a href="https://www.instagram.com/ketarealestate/">
+              <a href="https://www.instagram.com/ketajob.ch/">
                 <img src={InstagramIcon} alt="Instagram" className="h-8 w-8 sm:h-10 sm:w-10 hover:opacity-75 transition" />
               </a>
             </div>

@@ -35,7 +35,7 @@ const ScrollToTopButton = () => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-8  ml-4 h-20 pb-[5px]  cursor-pointer" // Ensure cursor-pointer is added here
+          className="w-8  ml-4 h-20 pb-[px]  cursor-pointer" // Ensure cursor-pointer is added here
         >
           <path
             strokeLinecap="round"
