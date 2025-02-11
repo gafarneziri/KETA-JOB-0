@@ -146,7 +146,7 @@ const OffeneStellen = () => {
           </div>
         </div>
         <button
-  onClick={() => navigate('/bewerbenbutton')} // Navigate to the Bewerben page
+  onClick={() => navigate('/bewerben')} // Navigate to the Bewerben page
   className="bg-white text-[#003049] px-1 py-0 rounded-full w-[55px] h-[16px] text-[8px] font-semibold md:w-[140px] md:h-[45px] md:text-base mt-4 md:mt-0 md:mr-10"
 >
   BEWERBEN
@@ -177,7 +177,7 @@ const OffeneStellen = () => {
           </div>
         </div>
         <button
-  onClick={() => navigate('/bewerbenbutton')} // Navigate to the Bewerben page
+  onClick={() => navigate('/bewerben')} // Navigate to the Bewerben page
   className="bg-white text-[#003049] px-1 py-0 rounded-full w-[55px] h-[16px] text-[8px] font-semibold md:w-[140px] md:h-[45px] md:text-base mt-4 md:mt-0 md:mr-10"
 >
   BEWERBEN

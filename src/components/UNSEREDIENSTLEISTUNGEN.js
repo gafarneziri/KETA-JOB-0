@@ -50,7 +50,7 @@ const Page3 = () => {
           <strong>Tipp:</strong> Auch in Zeiten überdurchschnittlicher
           Auslastung helfen wir Ihnen gerne mit motivierten "Springern" aus.
         </p>
-        <div className="flex justify-start mt-8 mb-10">
+        <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
             onClick={() => navigate("/bewerbenbutton")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"
@@ -84,7 +84,7 @@ const Page3 = () => {
         <p className="text-sm md:text-base mb-4">
           Zufriedene Mitarbeitende machen den Unterschied im Berufsalltag aus.
         </p>
-        <div className="flex justify-start mt-8 mb-10">
+        <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
             onClick={() => navigate("/bewerbenbutton")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"
@@ -116,7 +116,7 @@ const Page3 = () => {
         <p className="text-sm md:text-base mb-4">
           Gerne bringen wir Sie mit den richtigen Menschen zusammen.
         </p>
-        <div className="flex justify-start mt-8 mb-10">
+        <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
             onClick={() => navigate("/bewerbenbutton")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"

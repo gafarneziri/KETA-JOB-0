@@ -36,7 +36,7 @@ const HomePage = () => {
             {/* Button */}
             <button
               onClick={() => {
-                navigate('/bewerbenbutton');
+                navigate('/bewerben');
                 window.scrollTo(0, 0);
               }}
               className="flex items-center justify-center w-[79.54px] md:w-auto h-[21px] md:h-auto mt-6 md:mt-12 bg-white text-custom-color px-4 py-1 md:px-16 md:py-3 rounded-full text-xs md:text-2xl font-roboto"
@@ -85,7 +85,7 @@ const HomePage = () => {
                 Es braucht wenig, bis geschätzte Mitarbeitende ausfallen. Dies hinterlässt
                 Lücken im Team und kann die Qualität der Leistungen beeinträchtigen.
               </p>
-              <button onClick={() => navigate('/bewerbenbutton')}
+              <button onClick={() => navigate('/bewerben')}
                 className="flex items-center justify-center w-[157px] md:w-auto h-[30px] md:h-auto whitespace-nowrap text-[13.96px] md:text-base bg-white text-[#033755] px-6 py-2 rounded-full">
                 JETZT BEWERBEN
               </button>
@@ -105,7 +105,7 @@ const HomePage = () => {
               </p>
               <button
                 onClick={() => {
-                  navigate('/bewerbenbutton')
+                  navigate('/bewerben')
                   window.scrollTo(0, 0);
                 }}
                 className="flex items-center justify-center w-[157px] md:w-auto h-[30px] md:h-auto whitespace-nowrap text-[13.96px] md:text-base bg-white text-[#033755] px-6 py-2 rounded-full"
@@ -127,7 +127,7 @@ const HomePage = () => {
                 eine neue berufliche Herausforderung wünschen, wir bieten Ihnen die
                 Unterstützung und Ressourcen, die Sie benötigen.
               </p>
-              <button onClick={() => navigate('/bewerbenbutton')}
+              <button onClick={() => navigate('/bewerben')}
                 className="flex items-center justify-center w-[157px] md:w-auto h-[30px] md:h-auto whitespace-nowrap text-[13.96px] md:text-base bg-white text-[#033755] px-6 py-2 rounded-full">
                 JETZT BEWERBEN
               </button>
@@ -168,44 +168,53 @@ const HomePage = () => {
             {/* Cards Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14 p-4 md:p-0 ">
               {/* Left Card */}
-              <div className="border border-[#003049] rounded-lg p-8 relative border-2 md:mb-0 mb-8 ">
+              <div
+                className="border border-[#003049] rounded-lg p-8 relative border-2 md:mb-0 mb-8 cursor-pointer"
+                onClick={() => navigate('/bewerber')}
+              >
                 {/* Top Border with Gap for Icon */}
                 <div className="flex items-center justify-center -mt-20 mb-4">
                   <img
-                    src={require('../Assets/manlogo.png')} // Replace with the actual path to the person icon
+                    src={require('../Assets/manlogo.png')}
                     alt="Für Bewerber Icon"
-                    className="md:w-24 md:h-24 w-[70.06px]  h-[74.51] bg-white  p-0"
+                    className="md:w-24 md:h-24 w-[70.06px] h-[74.51px] bg-white p-0 cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevents event from bubbling up
+                      navigate('/bewerber');
+                    }}
                   />
                 </div>
-                <h3 className="font-bold text-[20px ] md:text-xl mb-4 text-[#003049] ">FÜR BEWERBER</h3>
-                <p className="text-[#003049] text-[14px] md:text-base  mb-8 text-center">
+                <h3 className="font-bold text-[20px] md:text-xl mb-4 text-[#003049]">FÜR BEWERBER</h3>
+                <p className="text-[#003049] text-[14px] md:text-base mb-8 text-center">
                   Ist Ihr Traumjob dabei? <br /> Entdecken Sie unsere spannenden Stellenangebote und bewerben Sie sich noch heute.
                 </p>
                 <button
-                  onClick={() => navigate('/bewerber')}
                   className="flex items-center justify-center mx-auto bg-gray-800 text-white md:h-auto md:w-auto h-[26.71px] w-[126.46px] rounded-full md:text-base text-[14.99px] px-6 py-2 hover:bg-gray-700 whitespace-nowrap transition duration-200"
                 >
                   LERNE MEHR
                 </button>
-
               </div>
 
               {/* Right Card */}
-              <div className="border border-[#003049] rounded-lg p-8 relative border-2 ">
-                {/* Top Border with Gap for Icon */}
-
-
+              <div
+                className="border border-[#003049] rounded-lg p-8 relative border-2 cursor-pointer"
+                onClick={() => navigate('/unternehmen')}
+              >
                 {/* Icon Section */}
                 <div className="flex items-center justify-center -mt-20 mb-4">
                   <img
-                    src={require('../Assets/houselogo.png')} // Replace with the actual path to the person icon
-                    alt="Für Bewerber Icon"
-                    className="md:w-18 md:h-24 w-[120.51px]  h-[74.51px] bg-white  pl-6 pr-6"
+                    src={require('../Assets/houselogo.png')}
+                    alt="Für Unternehmen Icon"
+                    className="md:w-18 md:h-24 w-[120.51px] h-[74.51px] bg-white pl-6 pr-6 cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevents event from bubbling up
+                      navigate('/unternehmen');
+                    }}
                   />
                 </div>
 
                 {/* Card Content */}
-                <h3 className="font-bold text-xl mb-4 text-[#003049] ">FÜR UNTERNEHMEN</h3>
+                <h3 className="font-bold text-xl mb-4 text-[#003049]">FÜR UNTERNEHMEN</h3>
                 <p className="text-[#003049] text-[14px] md:text-base mb-8 text-center">
                   Wir kümmern uns mit Herzblut, dass Ihr Betrieb gut aufgehoben und mit qualifiziertem Personal
                   <br className="hidden md:block" /> {/* Visible only on desktop */}
@@ -213,12 +222,10 @@ const HomePage = () => {
                 </p>
 
                 <button
-                  onClick={() => navigate('/unternehmen')}
                   className="flex items-center justify-center mx-auto bg-gray-800 text-white md:h-auto md:w-auto h-[26.71px] w-[126.46px] rounded-full md:text-base text-[14.99px] px-6 py-2 hover:bg-gray-700 whitespace-nowrap transition duration-200"
                 >
                   LERNE MEHR
                 </button>
-
               </div>
 
             </div>
@@ -401,7 +408,7 @@ const HomePage = () => {
                     navigate('/kontakt');
                     window.scrollTo(0, 0);
                   }}
-                  className="flex items-center justify-center mt-4 -ml-6 md:hidden bg-[#003049] w-[143px] md:w-auto md:h-auto h-[24px] text-white whitespace-nowrap text-[8px] md:text-base px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit"
+                  className="flex items-center justify-center mt-4 -ml-6 md:hidden bg-[#003049] w-[137px] md:w-auto md:h-auto h-[24px] text-white whitespace-nowrap text-[8px] md:text-base px-8 py-3 rounded-full hover:bg-[#002635] transition duration-200 w-fit"
                 >
                   KONTAKTIEREN SIE UNS
                 </button>
@@ -514,7 +521,7 @@ const HomePage = () => {
             {/* Third Box */}
             <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-2xl">
               <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
-              <img
+                <img
                   src={KetaAGlogo}
                   alt="Box 1"
                   className="object-contain rounded-lg"
@@ -525,7 +532,7 @@ const HomePage = () => {
             {/* Fourth Box */}
             <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
               <a href="https://ketacoin.io/">
-              <img
+                <img
                   src={KetaCoinicon}
                   alt="Box 1"
                   className="object-contain rounded-lg"

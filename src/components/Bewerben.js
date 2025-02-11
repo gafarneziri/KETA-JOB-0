@@ -4,6 +4,7 @@ import Kontakt from '../Assets/beautiful-young-blonde-woman-talking-mobile-phone
 
 const Bewerben = () => {
   const [selectedFiles, setSelectedFiles] = useState({});
+  const [isChecked, setIsChecked] = useState(false);
 
   // Function to handle file selection
   const handleFileChange = (e, fieldName) => {
@@ -19,6 +20,14 @@ const Bewerben = () => {
     delete updatedFiles[fieldName]; // Remove the file from the state
     setSelectedFiles(updatedFiles);
   };
+
+  
+  
+  // Function to toggle the radio button state
+  const toggleCheck = () => {
+    setIsChecked((prev) => !prev);
+  };
+
   return (
 
     <div>
@@ -223,9 +232,19 @@ const Bewerben = () => {
             </div>
 
             {/* Agreement Checkbox */}
-            <div className="flex items-center  -ml-12 md:ml-[200px]   mb-16 w-2/3 md:mx-auto">
-              <input type="radio" className="mr-2 h-5 w-5" />
-              <span className="text-[#003049] text-[10px] whitespace-nowrap md:text-[20px]">ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.</span>
+            <div
+              className="flex items-center -ml-12 md:ml-[200px] mb-16 w-2/3 md:mx-auto cursor-pointer"
+              onClick={toggleCheck}
+            >
+              <input
+                type="radio"
+                className="mr-2 h-5 w-5 cursor-pointer"
+                checked={isChecked}
+                readOnly
+              />
+              <span className="text-[#003049] text-[10px] whitespace-nowrap md:text-[20px] cursor-pointer">
+                ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.
+              </span>
             </div>
 
             {/* Submit Button */}

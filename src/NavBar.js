@@ -36,7 +36,7 @@ function NavBar() {
                 className="hidden md:block w-[116px] h-[65px] object-cover mt-[7px]"
               />
             </Link>
-            <div className="absolute left-0 top-full w-screen h-[4px] bg-[#002638]"></div>
+            
           </div>
 
           {/* Center - Navigation Links */}
@@ -103,7 +103,7 @@ function NavBar() {
 
           {/* Right Side - Apply Button */}
           <div className="hidden md:block">
-            <Link to="/bewerbenbutton">
+            <Link to="/bewerben">
               <button
                 type="button"
                 className="text-white bg-[#003049] font-medium rounded-full text-sm px-6 py-2">

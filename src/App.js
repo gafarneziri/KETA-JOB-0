@@ -28,7 +28,7 @@ function App() {
         <Route path="/stellen" element={<OffeneStellen />} />
         <Route path="/uber-uns" element={<UberUNS />} />
         <Route path="/kontakt" element={<Kontakt />} />
-        <Route path='/bewerbenbutton' element={<Bewerben />} />
+        <Route path='/bewerben' element={<Bewerben />} />
         <Route path="/anfrageformular" element={<Anfrageformular />} />
         <Route path="/anfrageformular2" element={<Formular2 />} />
       </Routes>
