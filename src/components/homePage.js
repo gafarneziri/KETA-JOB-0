@@ -436,7 +436,7 @@ const HomePage = () => {
             {/* First Box */}
             <div className="p-4 text-center -mt-4">
               <div className="text-6xl mb-4">
-                <a href="https://ketajob.ch">
+                <a href="https://www.ketaestate.com/">
                   <img
                     src={require("../Assets/kt1.png")}
                     className="mx-auto hover:scale-110 transition-transform duration-300"
