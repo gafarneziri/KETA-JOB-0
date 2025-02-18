@@ -16,7 +16,7 @@ const HomePage = () => {
         <div
           className="relative w-auto h-[320px] md:h-screen bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: `url(${require('../Assets/background-img.png')})`,
+            backgroundImage: `url(${require('../Assets/backgroundimg1.png')})`,
           }}
         >
           {/* Content overlay */}
@@ -141,7 +141,7 @@ const HomePage = () => {
             {/* Main Heading with Horizontal Lines */}
             <div className="flex items-center mb-6">
               {/* Line to the left */}
-              <div className="flex-grow h-[1px] bg-[#003049] ml-4 md:-ml-40"></div>
+              <div className="flex-grow h-[1px] bg-[#003049] ml-4 md:-ml-[220px]"></div>
 
               {/* Text */}
               <h2 className="text-[22px] md:text-5xl font-light md:pb-10 text-[#003049] px-4 tracking-wider text-center">
@@ -152,7 +152,7 @@ const HomePage = () => {
               </h2>
 
               {/* Line to the right */}
-              <div className="flex-grow h-[1px] bg-[#003049] mr-4 md:-mr-40"></div>
+              <div className="flex-grow h-[1px] bg-[#003049] mr-4 md:-mr-[220px]"></div>
             </div>
 
 
