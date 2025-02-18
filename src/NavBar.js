@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Arrow1 from '../src/Assets/arrow1.png';
 import WhiteLogo from '../src/Assets/white-logo.svg';
 import NavbarIcon from '../src/Assets/navbarIcon.svg';
+import LogoDesk from '../src/Assets/logodesk.svg';
 
 function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -31,7 +32,7 @@ function NavBar() {
                 className="w-[90px] h-[50px] object-cover md:hidden mt-[7px] "
               />
               <img
-                src={require('./Assets/Group 19.png')}
+                src={LogoDesk}
                 alt="Logo"
                 className="hidden md:block w-[116px] h-[65px] object-cover mt-[7px]"
               />
@@ -64,28 +65,28 @@ function NavBar() {
                 <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 md:w-72 bg-white rounded-[25px] shadow-lg z-[1100] text-center">
                   <Link
                     to="/unsere"
-                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100"
+                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100 transition duration-200"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     UNSERE DIENSTLEISTUNGEN
                   </Link>
                   <Link
                     to="/unternehmen"
-                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100"
+                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100 transition duration-200"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     FÜR UNTERNEHMEN
                   </Link>
                   <Link
                     to="/bewerber"
-                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100"
+                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100 transition duration-200"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     FÜR BEWERBER
                   </Link>
                   <Link
                     to="/stellen"
-                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100"
+                    className="block px-4 py-2 text-[#003049] hover:bg-gray-100  transition duration-200 rounded-b-[25px]"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     OFFENE STELLEN
@@ -229,7 +230,7 @@ function NavBar() {
                 KONTAKT
               </Link>
               <Link
-                to="/bewerbenbutton"
+                to="/bewerben"
                 className="block text-white font-medium py-4 text-[24px]"
                 onClick={toggleMenu}
               >
