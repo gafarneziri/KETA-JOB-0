@@ -86,13 +86,20 @@ const Formular2 = () => {
   };
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 098a63e0a388bb9d50fa4a83308765c18337718b
   const [checked, setChecked] = useState(false); // Checkbox state
   
     const handleClick = () => {
       setChecked(!checked); // Toggle checkbox state
     };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 098a63e0a388bb9d50fa4a83308765c18337718b
   return (
     <div className="min-h-screen bg-[#003049] flex justify-center items-center py-12">
       {/* Back Arrow */}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Uberuns1 from '../Assets/Bewerben.png';
 import Kontakt from '../Assets/beautiful-young-blonde-woman-talking-mobile-phone-against-grey-background 1.png';
+import NewImageKontakt from '../Assets/bwerbennewimage.png';
 
 const Bewerben = () => {
   const [selectedFiles, setSelectedFiles] = useState({});
@@ -21,8 +22,8 @@ const Bewerben = () => {
     setSelectedFiles(updatedFiles);
   };
 
-  
-  
+
+
   // Function to toggle the radio button state
   const toggleCheck = () => {
     setIsChecked((prev) => !prev);
@@ -35,9 +36,9 @@ const Bewerben = () => {
         {/* Top Section with Background Image and Centered Title */}
         <div className="relative w-full pt-10  ">
           <img
-            src={Kontakt}
+            src={NewImageKontakt}
             alt="kontakt"
-            className="w-full h-[117.31px] sm:h-auto object-cover"
+            className="w-full h-[117.31px] md:h-[252px] sm:h-auto object-cover"
           />
 
           {/* Centered Title on Image */}
@@ -80,113 +81,123 @@ const Bewerben = () => {
 
         </div>
 
-        <div className=" flex md:block items-center justify-center min-h-screen bg-[#003049] text-white py-8 md:py-32 px-16 font-Montserrat">
+        <div className=" flex md:block items-center justify-center min-h-screen bg-[#003049] text-white py-8 md:py-12 px-16 font-Montserrat">
           {/* Form Container */}
-          <div className="bg-white rounded-lg shadow-lg p-20 w-[350px] md:w-auto md:max-w-[1800px] h-[1700px] md:h-auto mx-auto">
+          <div className="bg-white rounded-[29px] shadow-lg p-20 w-[350px] md:w-[1400px]  h-[1700px] md:h-[933px] mx-auto">
 
             {/* Personal Information Section */}
             <div className="flex flex-col  mb-12">
-              <h3 className="text-[#003049] text-[18px] -ml-14 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
-              <div className="grid grid-cols-1 md:grid-cols-2  gap-y-[2px] md:gap-y-6 gap-x-24 w-2/3 mx-auto">
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[27.28px]">Vorname</label>
+              <h3 className="text-[#003049] text-[18px] -ml-14 md:-ml-0 md:text-[20px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">PERSÖNLICHE INFORMATIONEN</h3> {/* Increased mb-8 for spacing */}
+              <div className="grid grid-cols-1 md:grid-cols-4  gap-y-[2px] md:gap-y-6 gap-x-24 md:gap-x-[300px] w-2/3 mx-auto md:mx-0">
+                <div className="flex flex-col mt-4 md:mt-[0px] ">
+                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Vorname</label>
                   <input
                     type="text"
                     placeholder="Vorname"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[420px] h-[28.49px] md:h-[63px] px-4 py-2 text-black   placeholder-gray-500"
+                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px]  md:h-[42px] h-[28.49px]  px-4 py-2 text-black   placeholder-gray-500"
                   />
                 </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[27.28px]">Nachname</label>
+                <div className="flex flex-col mt-4 md:mt-[0px] ">
+                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Nachname</label>
                   <input
                     type="text"
                     placeholder="Nachname"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[420px] h-[28.49px] md:h-[63px] px-4 py-2 text-black   placeholder-gray-500"
+                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[280px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
                 </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[27.28px]">E-Mail Adesse</label>
+                <div className="flex flex-col mt-4 md:mt-[0px]">
+                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 whitespace-nowrap  md:text-[18px]">E-Mail Adresse</label>
                   <input
                     type="text"
                     placeholder="Email"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[420px] h-[28.49px] md:h-[63px] px-4 py-2 text-black   placeholder-gray-500"
+                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
                 </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[27.28px]">Mobil</label>
+                <div className="flex flex-col mt-4 md:mt-0">
+                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Mobil</label>
                   <input
                     type="text"
                     placeholder="E.G. +1 300...."
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[420px] h-[28.49px] md:h-[63px] px-4 py-2 text-black   placeholder-gray-500"
+                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
                 </div>
               </div>
 
             </div>
 
-            {/* Address Section */}
-            <div className="flex flex-col mb-12">
-              <h3 className="text-[#003049] text-[18px] -ml-12 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">ADRESSE</h3> {/* Increased mb-8 for spacing */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[2px] md:gap-y-6 gap-x-18 w-2/3 mx-auto">
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[27.28px]">ORT</label>
-                  <input
-                    type="text"
-                    placeholder="Ort"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[372.06px] h-[28.49px] md:h-[72.71px] px-4 py-2 text-black placeholder-gray-500"
-                  />
+
+
+            <div className="block md:flex">
+              {/* Address Section */}
+              <div className="flex flex-col md:flex-row mb-12 md:mb-0 pr-0 md:pr-8 ">
+                <h3 className="text-[#003049] text-[18px] -ml-14 md:-ml-0 md:text-[20px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]  ">ADRESSE</h3> {/* Increased mb-8 for spacing */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[2px] md:gap-y-0 gap-x-18 md:gap-x-0 w-2/3 mx-auto  pt-0 md:pt-6">
+                  <div className="flex flex-col mt-4 md:mt-4 -ml-0 md:-ml-[120px]">
+                    <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[18px] pt-0 md:pt-4">ORT</label>
+                    <input
+                      type="text"
+                      placeholder="Ort"
+                      className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
+                    />
+                  </div>
+                  <div className="flex flex-col mt-4 md:mt-4 -ml-0 md:-ml-[10px]  ">
+                    <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 pt-0 md:pt-4 md:text-[18px]">PLZ</label>
+                    <input
+                      type="text"
+                      placeholder="PLZ"
+                      className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[27.28px]">PLZ</label>
-                  <input
-                    type="text"
-                    placeholder="PLZ"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[372.06px] h-[28.49px] md:h-[72.71px] px-4 py-2 text-black placeholder-gray-500"
-                  />
+              </div>
+
+              {/* Job Details Section */}
+              <div className="flex flex-col md:flex-row mb-12 md:mb-0">
+                <h3 className="text-[#003049] -ml-14   md:-mr-20 text-[18px] md:text-[20px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049] text-left md:text-right md:ml-auto">
+                  JOB DETAILS
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[2px] mt-0 md:mt-4 md:gap-y-0 md:gap-x-0 w-2/3 mx-auto">
+                  <div className="flex flex-col mt-4 md:mt-6 -ml-0 md:-ml-[120px] ">
+                    <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[18px] whitespace-nowrap pt-0 md:pt-4">
+                      Gewünschtes Pensum
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="z.B. 80%"
+                      className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
+                    />
+                  </div>
+                  <div className="flex flex-col mt-4 md:mt-6 -ml-0 md:-ml-[40px] ">
+                    <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[18px] whitespace-nowrap pt-0 md:pt-4">
+                      Datum Von
+                    </label>
+                    <input
+                      type="date"
+                      className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
+                    />
+                  </div>
+                  <div className="flex flex-col mt-4 md:mt-6 -ml-0 md:-ml-[-40px]">
+                    <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[18px] whitespace-nowrap pt-0 md:pt-4">
+                      Datum Bis
+                    </label>
+                    <input
+                      type="date"
+                      className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Job Details Section */}
-            <div className="flex flex-col mb-12">
-              <h3 className="text-[#003049] text-[18px] -ml-12 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">JOB DETAILS</h3> {/* Increased mb-8 for spacing */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[2px] md:gap-y-10 md:gap-x-64 w-2/3 mx-auto">
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[27.28px] whitespace-nowrap">
-                    Gewünschtes Pensum
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="z.B. 80%"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[320px] h-[28.49px] md:h-[63px] px-4 py-2 text-black placeholder-gray-500"
-                  />
-                </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[27.28px] whitespace-nowrap">
-                    Datum Von
-                  </label>
-                  <input
-                    type="date"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[320px] h-[28.49px] md:h-[63px] px-4 py-2 text-black placeholder-gray-500"
-                  />
-                </div>
-                <div className="flex flex-col mt-4">
-                  <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[27.28px] whitespace-nowrap">
-                    Datum Bis
-                  </label>
-                  <input
-                    type="date"
-                    className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[320px] h-[28.49px] md:h-[63px] px-4 py-2 text-black placeholder-gray-500"
-                  />
-                </div>
-              </div>
 
-            </div>
+
+
 
             {/* Documents Section */}
             <div className="flex flex-col mb-12">
-              <h3 className="text-[#003049] text-[18px] -ml-12 md:-ml-0 md:text-[27.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">DOKUMENTE</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 whitespace-nowrap gap-y-6 pt-8 md:pt-0 md:gap-12 w-2/3 mx-auto">
+              <h3 className="text-[#003049] text-[18px] -ml-12 md:-ml-0 md:text-[23.28px] font-semibold md:mb-8 whitespace-nowrap relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049] pt-0 md:pt-8">DOKUMENTE</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 whitespace-nowrap   gap-0 md:gap-[220px]  md:gap-y-0 gap-y-6 pt-8 md:pt-0  w-2/3 mx-auto md:mx-[100px]">
                 {[
                   { label: 'Bewerbungsschreiben', fieldName: 'bewerbungsschreiben' },
                   { label: 'Arbeitszeugnisse / Diplome', fieldName: 'arbeitszeugnisse' },
@@ -194,7 +205,7 @@ const Bewerben = () => {
                   { label: 'CV', fieldName: 'cv' },
                 ].map(({ label, fieldName }) => (
                   <div key={fieldName} className="flex flex-col items-center">
-                    <label className="text-[#003049]  text-center text-[12.09px] md:text-[27px] mb-2">{label}</label>
+                    <label className="text-[#003049]  text-center text-[12.09px] md:text-[16px] mb-2">{label}</label>
                     <input
                       type="file"
                       id={fieldName}
@@ -202,7 +213,7 @@ const Bewerben = () => {
                       className="hidden"
                     />
                     <label htmlFor={fieldName}>
-                      <div className="bg-[#003049] text-white text-[8.63px] md:text-[23px] rounded-[236.29px] w-[193px] md:w-[388.21px] h-[28px] md:h-[72.71px] flex items-center justify-center md:px-6  text-center cursor-pointer">
+                      <div className="bg-[#003049] text-white text-[8.63px] md:text-[16px] rounded-[236.29px] w-[193px] md:w-[226.21px] h-[28px] md:h-[42.71px] flex items-center justify-center md:px-6  text-center md:text-left cursor-pointer">
                         Datei Hochladen
                       </div>
 
@@ -226,14 +237,14 @@ const Bewerben = () => {
             </div>
 
             {/* Message Field */}
-            <div className="flex flex-col items-start  mb-2 md:mb-6 w-2/3 mx-auto  m md:mt-6">
-              <label className="text-[#003049] text-[12.09px] -ml-20  md:-ml-0 md:text-[25px] mb-2">Mitteilung</label>
-              <textarea placeholder="Weitere Informationen hinzufügen" className="border border-gray-300 -ml-20  md:-ml-0 text-[8.63px] md:text-base rounded-[23.01px] w-[303px] md:w-full h-[133px] md:h-[215.24px] px-4 py-4 text-black placeholder-gray-500 resize-none"></textarea>
+            <div className="flex flex-col items-start ml-6 md:ml-0 mb-2 md:mb-6   mx-auto  m md:mt-6">
+              <label className="text-[#003049] text-[12.09px] -ml-20  md:-ml-0 md:text-[16px] mb-2">Mitteilung</label>
+              <textarea placeholder="Weitere Informationen hinzufügen" className="border border-gray-300 -ml-20  md:-ml-0 text-[8.63px] md:text-base rounded-[23.01px] w-[303px] md:w-[659px] h-[133px] md:h-[132pxpx] px-4 py-4 text-black placeholder-gray-500 resize-none"></textarea>
             </div>
 
             {/* Agreement Checkbox */}
             <div
-              className="flex items-center -ml-12 md:ml-[200px] mb-16 w-2/3 md:mx-auto cursor-pointer"
+              className="flex items-center justify-center md:-ml-[15px] md:justify-start  mb-16 md:mb-10 w-2/3 mx-auto cursor-pointer"
               onClick={toggleCheck}
             >
               <input
@@ -242,14 +253,15 @@ const Bewerben = () => {
                 checked={isChecked}
                 readOnly
               />
-              <span className="text-[#003049] text-[10px] whitespace-nowrap md:text-[20px] cursor-pointer">
+              <span className="text-[#003049] text-[10px] whitespace-nowrap md:text-[16px] cursor-pointer">
                 ICH ERKLÄRE MICH MIT DEN AGB EINVERSTANDEN.
               </span>
             </div>
 
+
             {/* Submit Button */}
-            <div className="w-2/3 mx-auto flex md:justify-start justify-center">
-              <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[155px] md:w-[388.21px] h-[32px] md:h-[72.71px] text-[10px] md:text-[27.05px] text-center whitespace-nowrap flex items-center justify-center">
+            <div className=" mx-auto flex md:justify-start justify-center">
+              <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[155px] md:w-[205px] h-[32px] md:h-[46px] text-[10px] md:text-[14px] text-center whitespace-nowrap flex items-center justify-center">
                 BEWERBUNG SENDEN
               </button>
             </div>

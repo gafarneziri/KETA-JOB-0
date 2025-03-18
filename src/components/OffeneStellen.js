@@ -142,8 +142,89 @@ const OffeneStellen = () => {
             )}
           </div>
         </div>
+          <button className="bg-white text-[#003049] rounded-full md:w-[1000px] md:h-[50px] w-[351px] h-[34px]">
+            Suchen
+          </button>
+        </div>
+        <div className="flex flex-col items-center mt-10 sm:hidden  mb-10">
+          {/* Horizontal Line */}
+          <div className="w-80 max-w-6xl border-t border-white "></div>
+
+          {/* Section Title */}
+          <h2 className="text-white text-2xl md:text-2xl font-semibold mt-4">
+            AVAILABLE JOBS
+          </h2>
+        </div>
+
+        <div className="w-full max-w-6xl grid md:grid-cols-1 grid-cols-2 gap-4 p-4">
+          {/* IT Software Developer Listings */}
+          <div className="grid grid-cols-1 gap-4 md:space-y-8 md:block">
+            {[1, 2, 3, 4].map((_, index) => (
+              <div
+                key={`developer-${index}`}
+                className="border border-white p-5 md:rounded-full rounded-[10px] flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between"
+              >
+                <div className="text-center md:text-left md:ml-6">
+                  <h2 className="text-sm md:text-xl font-semibold">IT SOFTWARE DEVELOPER</h2>
+                  <div className="flex md:flex-wrap justify-center md:justify-start md:space-x-4 space-x-1  mt-2 pt-2">
+                    <span className="border border-white px-4  py-1 rounded-full md:text-sm text-[8px] font-medium">
+                      Zurich
+                    </span>
+                    <span className="border border-white px-4 py-1 rounded-full md:text-sm text-[8px] font-medium">
+                      Temporär
+                    </span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => navigate('/bewerben')} // Navigate to the Bewerben page
+                  className="bg-white text-[#003049] px-1 py-0 rounded-full w-[55px] h-[16px] text-[8px] font-semibold md:w-[140px] md:h-[45px] md:text-base mt-4 md:mt-0 md:mr-10"
+                >
+                  BEWERBEN
+                </button>
+
+              </div>
+            ))}
+          </div>
+
+          {/* Graphic Designer Listings */}
+          <div className="grid grid-cols-1 gap-4 md:space-y-8 md:block pt-0 md:pt-4">
+            {[1, 2, 3, 4].map((_, index) => (
+              <div
+                key={`designer-${index}`}
+                className="border border-white p-5 md:rounded-full rounded-[10px] flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between"
+              >
+                <div className="text-center md:text-left md:ml-6">
+                  <h2 className="text-sm md:text-xl font-semibold md:mt-0 ">GRAPHIC  <span className="block sm:hidden -mt-6">
+                    <br />
+                  </span> DESIGNER</h2>
+                  <div className="flex md:flex-wrap justify-center md:justify-start md:space-x-4 space-x-1 mt-2 pt-2">
+                    <span className="border border-white px-4 py-1 rounded-full md:text-sm  text-[7px] font-medium">
+                      London
+                    </span>
+                    <span className="border border-white px-4 py-1 rounded-full md:text-sm text-[7px] font-medium">
+                      Festanstellung
+                    </span>
+                  </div>
+                </div>
+                <button
+                  onClick={() => navigate('/bewerben')} // Navigate to the Bewerben page
+                  className="bg-white text-[#003049] px-1 py-0 rounded-full w-[55px] h-[16px] text-[8px] font-semibold md:w-[140px] md:h-[45px] md:text-base mt-4 md:mt-0 md:mr-10"
+                >
+                  BEWERBEN
+                </button>
+
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+
+
+
       </div>
-    </div>
+    
   );
 };
 

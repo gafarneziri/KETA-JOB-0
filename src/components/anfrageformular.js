@@ -13,6 +13,7 @@ function Anfrageformular() {
     plz: '',
   });
 
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -54,6 +55,14 @@ function Anfrageformular() {
   };
 
 
+  const [checked, setChecked] = useState(false); // Checkbox state
+
+  const handleClick = () => {
+    setChecked(!checked); // Toggle checkbox state
+  };
+
+
+
   return (
     <div className="min-h-screen bg-[#003049] flex justify-center items-center py-12">
       <Link
@@ -67,7 +76,7 @@ function Anfrageformular() {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-[30px] shadow-lg p-12  w-[351px] md:w-full md:max-w-[1160px] mt-10 md:mt-24"
+        className="bg-white rounded-[30px] shadow-lg p-12  w-[351px] md:w-[1460px] md:h-[750px] md:max-w-[1160px] mt-10 md:mt-[10px]"
       >
         {/* Title */}
         <h2 className="text-[#003049] text-center text-3xl font-semibold mb-10 uppercase hidden md:block">
@@ -79,7 +88,7 @@ function Anfrageformular() {
           <h3 className="text-[#003049] font-bold -ml-6 mb-4 text-[16px]  md:text-lg uppercase md:mb-6 md:ml-2 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">
             Kontaktadaten
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8 ml-2">
+          <div className="grid grid-cols-1 md:grid-cols-4  gap-4 md:gap-[30px] ml-2">
             <div className='-ml-8 md:ml-0'>
               <label className="block text-[#003049]  mb-2">
                 Firmenname
@@ -90,10 +99,10 @@ function Anfrageformular() {
                 value={formData.firm}
                 onChange={handleChange}
                 placeholder="Firmennamen"
-                className="  w-[303px] h-[30px] pl-4  md:w-[300px] md:h-12 md:p-4 border border-gray-300 rounded-full"
+                className="  w-[303px] h-[30px] pl-4  md:w-[260px] md:h-[42px] md:p-4 border border-gray-300 rounded-full"
               />
             </div>
-            <div className="  -ml-8 md:-ml-52">
+            <div className="  -ml-8 md:-ml-0">
               <label className="block text-[#003049]  mb-2">
                 Ihr Name
               </label>
@@ -103,7 +112,7 @@ function Anfrageformular() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Ihr Name"
-                className="  w-[303px] h-[30px] pl-4  md:w-[300px] md:h-12 md:p-4 border border-gray-300 rounded-full"
+                className="  w-[303px] h-[30px] pl-4   md:w-[260px] md:h-[42px] md:p-4 border border-gray-300 rounded-full"
               />
             </div>
             <div className='-ml-8 md:ml-0'>
@@ -116,10 +125,10 @@ function Anfrageformular() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className=" w-[303px] h-[30px] pl-4  md:w-[300px] md:h-12 md:p-4 border border-gray-300 rounded-full"
+                className=" w-[303px] h-[30px] pl-4   md:w-[260px] md:h-[42px] md:p-4 border border-gray-300 rounded-full"
               />
             </div>
-            <div className=" -ml-8  md:-ml-52">
+            <div className=" -ml-8  md:-ml-0">
               <label className="block text-[#003049]  mb-2">
                 Mobil
               </label>
@@ -129,7 +138,7 @@ function Anfrageformular() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="E.g. +1 300..."
-                className=" w-[303px] h-[30px] pl-4  md:w-[300px] md:h-12 md:p-4 border border-gray-300 rounded-full"
+                className=" w-[303px] h-[30px] pl-4   md:w-[260px] md:h-[42px] md:p-4 border border-gray-300 rounded-full"
               />
             </div>
           </div>
@@ -209,7 +218,7 @@ function Anfrageformular() {
           </div>
 
           {/* Job Details */}
-          <div className="ml-2 hidden sm:block">
+          <div className="-ml-12 hidden sm:block">
             <h3 className="text-[#003049] font-bold text-lg uppercase mb-6 relative after:content-[''] after:block after:w-10 after:h-[2px] after:bg-[#003049]">
               Job Details
             </h3>
@@ -221,7 +230,7 @@ function Anfrageformular() {
                 name="job"
                 value={formData.job}
                 onChange={handleChange}
-                className="w-full p-2 h-12 border border-gray-300 rounded-full"
+                className="w-full  p-2 h-12  border border-gray-300 rounded-full"
               >
                 <option value="">Job</option>
                 <option value="job1">Job 1</option>
@@ -232,7 +241,7 @@ function Anfrageformular() {
           </div>
 
           {/* Mitteilung Mobile */}
-          <div className="block md:hidden -ml-6  md:0   mt-6 ">
+          <div className="block md:hidden -ml-6    mt-6 ">
             <label className="block text-[#003049]  mb-2">
               Mitteilung
             </label>
@@ -248,17 +257,22 @@ function Anfrageformular() {
         </div>
 
         {/* Terms and Send Button */}
-        <div className="flex items-center space-x-4 mb-16 ml-2">
+        <div className="flex items-center -mt-0 md:-mt-[75px] space-x-4 mb-16 ml-2">
           <input
             type="radio"
             className="md:h-5 md:w-5 h-[8.12px] w-[8.12px] text-[#003049] border-gray-300 rounded"
-            required
+            checked={checked}
+            onClick={handleClick} // This allows toggling
+            readOnly // Prevents default behavior, so we control it manually
           />
-          <label className="text-[#003049] md:text-sm text-[8.63px]">
+          <label
+            className="text-[#003049] md:text-sm text-[8.63px] cursor-pointer"
+            onClick={handleClick}
+          >
             Ich erkläre mich mit den AGB einverstanden.
           </label>
         </div>
-        <div className=" flex justify-center md:justify-start md:ml-2">
+        <div className=" flex justify-center md:justify-start  md:ml-2 md:-mt-[40px]">
           <button
             type="submit"
             className="w-[155px] h-[32px] md:w-auto md:h-auto bg-[#003049] text-[8px] text-center flex justify-center items-center whitespace-nowrap md:text-base text-white uppercase px-10 py-4 rounded-full hover:bg-[#002136] transition"
