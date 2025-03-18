@@ -52,7 +52,7 @@ const Page3 = () => {
         </p>
         <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
-            onClick={() => navigate("/bewerbenbutton")}
+            onClick={() => navigate("/bewerben")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"
           >
             JETZT BEWERBEN
@@ -86,7 +86,7 @@ const Page3 = () => {
         </p>
         <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
-            onClick={() => navigate("/bewerbenbutton")}
+            onClick={() => navigate("/bewerben")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"
           >
             JETZT BEWERBEN
@@ -118,7 +118,7 @@ const Page3 = () => {
         </p>
         <div className="flex justify-center md:justify-start mt-8 mb-10">
           <button
-            onClick={() => navigate("/bewerbenbutton")}
+            onClick={() => navigate("/bewerben")}
             className="bg-white text-[#003049] font-Montserrat py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300"
           >
             JETZT BEWERBEN

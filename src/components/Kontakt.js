@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Kontakt from '../Assets/beautiful-young-blonde-woman-talking-mobile-phone-against-grey-background 1.png';
 import LocationIcon from '../Assets/locationicon.svg';
+import NewImageKontakt from '../Assets/bwerbennewimage.png';
 
 const Page5 = () => {
   const [formData, setFormData] = useState({
@@ -53,9 +53,9 @@ const Page5 = () => {
       {/* Top Section */}
       <div className="relative w-full mt-10">
         <img
-          src={Kontakt}
+          src={NewImageKontakt}
           alt="kontakt"
-          className="w-full md:w-full h-[117.31px] md:h-[400px] sm:h-auto object-cover"
+          className="w-full md:w-full h-[117.31px] md:h-[252px] sm:h-auto object-cover"
         />
 
         {/* Centered Title on Image */}
@@ -196,21 +196,21 @@ const Page5 = () => {
 
 
 
-            <div className="mt-8 flex flex-col  gap-4">
+            <div className=" mt-6 -ml-6 md:-ml-0 md:mt-8 flex flex-col  gap-4">
               <div className="flex items-center gap-4">
                 <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
                   <img src={require('../Assets/facebook.png')} alt="Facebook Icon" className="w-8 h-8" />
                 </a>
                 <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
-                <p>@ketajob</p>
+                <p className='whitespace-nowrap'>Keta Job</p>
                 </a>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 ">
                 <a href="https://www.instagram.com/ketajob.ch/">
                   <img src={require('../Assets/instagram1.png')} alt="Instagram Icon" className="w-8 h-8" />
                 </a>
                 <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
-                <p>@ketajob</p>
+                <p className='whitespace-nowrap -mr-8 md:-mr-0'>@ketajob.ch</p>
                 </a>
               </div>
               <div className="flex items-center gap-4">
@@ -218,7 +218,7 @@ const Page5 = () => {
                   <img src={require('../Assets/in.png')} alt="LinkedIn Icon" className="w-8 h-8" />
                 </a>
                 <a href="https://www.facebook.com/p/KETA-Job-61558074714938/?locale=gn_PY">
-                <p>@ketajob</p>
+                <p className='whitespace-nowrap'>Keta Job</p>
                 </a>
               </div>
             </div>

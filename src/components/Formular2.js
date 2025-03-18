@@ -84,6 +84,14 @@ const Formular2 = () => {
     }
   };
 
+
+
+  const [checked, setChecked] = useState(false); // Checkbox state
+  
+    const handleClick = () => {
+      setChecked(!checked); // Toggle checkbox state
+    };
+
   return (
     <div className="min-h-screen bg-[#003049] flex justify-center items-center py-12">
       {/* Back Arrow */}
@@ -283,13 +291,18 @@ const Formular2 = () => {
             className="w-[303px] h-[150px] md:w-[480px] md:h-32 -ml-[35px] md:-ml-0 p-4 border border-gray-300 rounded-[20px]"
           ></textarea>
         </div>
-        <div className="flex items-center md:-mt-8 space-x-4 mb-16 ml-2 mt-4 md:mt-0">
+        <div className="flex items-center space-x-4 mb-16 ml-2">
           <input
             type="radio"
-            className="md:h-5 md:w-5 h-[8.12px] w-[8.12px]  text-[#003049] border-gray-300 rounded-[10px]"
-            required
+            className="md:h-5 md:w-5 h-[8.12px] w-[8.12px] text-[#003049] border-gray-300 rounded"
+            checked={checked}
+            onClick={handleClick} // This allows toggling
+            readOnly // Prevents default behavior, so we control it manually
           />
-          <label className="text-[#003049]  text-[10px] whitespace-nowrap md:text-sm">
+          <label
+            className="text-[#003049] md:text-sm text-[8.63px] cursor-pointer"
+            onClick={handleClick}
+          >
             Ich erkläre mich mit den AGB einverstanden.
           </label>
         </div>
