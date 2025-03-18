@@ -13,6 +13,9 @@ import Bewerben from './components/Bewerben';
 import Anfrageformular from './components/anfrageformular';
 import Formular2 from './components/Formular2';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import AdminLogin from './components/adminLogin';
+import AddJobss from './components/AddJobss';  
+
 
 function App() {
   return (
@@ -20,7 +23,8 @@ function App() {
        <ScrollToTopButton />
       <NavBar />
       <Routes>
-         
+      <Route path="/admin/AddJobss" element={<AddJobss />} />
+      <Route path="/admin/dashboard" element={<AdminLogin />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/unsere" element={<UNSEREDIENSTLEISTUNGEN/>} />
         <Route path="/unternehmen" element={<FurUnternehmen />} />
