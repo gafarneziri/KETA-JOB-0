@@ -1,9 +1,15 @@
-require('dotenv').config(); // Load environment variables
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const multer = require('multer');
+
+console.log('✅ Debugging ENV Variables:');
+console.log('EMAIL_USER:', process.env.EMAIL_USER || '❌ NOT LOADED');
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? '****' : '❌ NOT LOADED');
+console.log('PORT:', process.env.PORT || '❌ NOT LOADED');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -11,26 +17,28 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-// ✅ Email transporter (Using environment variables for security)
+// ✅ Multer Setup
+const storage = multer.memoryStorage();
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 5 * 1024 * 1024 },
+});
+
+// ✅ Nodemailer Setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'mail.ketagroup.ch',
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
   tls: {
-    rejectUnauthorized: false, // Ignore self-signed certificate errors
+    rejectUnauthorized: false,
   },
 });
 
-// ✅ File upload setup with 5MB limit
-const storage = multer.memoryStorage();
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB max file size
-});
-
-// ✅ Utility function to send emails
+// ✅ Email Sending Utility
 const sendEmail = async (to, subject, text, attachments = []) => {
   try {
     await transporter.sendMail({
@@ -48,7 +56,7 @@ const sendEmail = async (to, subject, text, attachments = []) => {
   }
 };
 
-// ✅ Route: Send an email (Anfrageformular)
+// ✅ Route: Anfrageformular
 app.post('/send-email', async (req, res) => {
   const { name, email, phone, firm, message, job, ort, plz } = req.body;
   const emailText = `
@@ -59,7 +67,7 @@ app.post('/send-email', async (req, res) => {
     Job: ${job}
     Ort: ${ort}
     PLZ: ${plz}
-    
+
     Message: ${message}
   `;
 
@@ -67,7 +75,7 @@ app.post('/send-email', async (req, res) => {
   res.status(response.success ? 200 : 500).send(response.message);
 });
 
-// ✅ Route: Send an email with file attachments (Formular2)
+// ✅ Route: Formular2 with Files
 app.post('/send-email-formular2', upload.fields([
   { name: 'CV' }, { name: 'Diplome' }, { name: 'Arbeitszeugnisse' }, { name: 'Bild Hochladen' }, { name: 'Sonstiges' }
 ]), async (req, res) => {
@@ -94,7 +102,7 @@ app.post('/send-email-formular2', upload.fields([
   res.status(response.success ? 200 : 500).send(response.message);
 });
 
-// ✅ Route: Send an email for Page 5 (General Inquiry)
+// ✅ Route: General Inquiry
 app.post('/send-email-page5', async (req, res) => {
   const { name, email, phone, location, message } = req.body;
   const emailText = `
@@ -109,7 +117,7 @@ app.post('/send-email-page5', async (req, res) => {
   res.status(response.success ? 200 : 500).send(response.message);
 });
 
-// ✅ Route: Bewerben (Job Application with File Upload)
+// ✅ Route: Bewerben with Attachments
 app.post('/send-email-bewerben', upload.fields([
   { name: 'bewerbungsschreiben' }, { name: 'arbeitszeugnisse' }, { name: 'bild' }, { name: 'cv' }
 ]), async (req, res) => {
@@ -137,7 +145,7 @@ app.post('/send-email-bewerben', upload.fields([
   res.status(response.success ? 200 : 500).send(response.message);
 });
 
-// ✅ Start the server
+// ✅ Start server
 app.listen(port, () => {
   console.log(`✅ Server running on http://localhost:${port}`);
 });

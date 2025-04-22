@@ -207,10 +207,15 @@ function Anfrageformular() {
                   onChange={handleChange}
                   className=" w-[303px] h-[30px] pl-4 md:w-[223px] md:p-4 md:h-12 border border-gray-300 rounded-full"
                 >
-                  <option value="">Job</option>
-                  <option value="job1">Job 1</option>
-                  <option value="job2">Job 2</option>
-                  <option value="job3">Job 3</option>
+                <option value="">--</option>
+                <option value="job1">Medical</option>
+                <option value="job2">Kader Höhere Angestellte</option>
+                <option value="job3">Technische Berufe</option>
+                <option value="job4">Informatik, Werbung, Grafik, Marketing</option>
+                <option value="job5">Verkaufsberufe</option>
+                <option value="job6">Kaufmannische Berufe</option>
+                <option value="job7">Bank- und Versicherungswesen</option>
+                <option value="job8">Dienstleistungs Berufe</option>
                 </select>
               </div>
             </div>
@@ -232,10 +237,15 @@ function Anfrageformular() {
                 onChange={handleChange}
                 className="w-full  p-2 h-12  border border-gray-300 rounded-full"
               >
-                <option value="">Job</option>
-                <option value="job1">Job 1</option>
-                <option value="job2">Job 2</option>
-                <option value="job3">Job 3</option>
+                <option value="">--</option>
+                <option value="job1">Medical</option>
+                <option value="job2">Kader Höhere Angestellte</option>
+                <option value="job3">Technische Berufe</option>
+                <option value="job4">Informatik, Werbung, Grafik, Marketing</option>
+                <option value="job5">Verkaufsberufe</option>
+                <option value="job6">Kaufmannische Berufe</option>
+                <option value="job7">Bank- und Versicherungswesen</option>
+                <option value="job8">Dienstleistungs Berufe</option>
               </select>
             </div>
           </div>
