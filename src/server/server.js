@@ -17,6 +17,10 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("✅ Server is live and ready to send emails!");
+});
+
 // ✅ Multer Setup
 const storage = multer.memoryStorage();
 const upload = multer({
