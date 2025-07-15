@@ -6,25 +6,40 @@ import NewImageKontakt from '../Assets/bwerbennewimage.png';
 const Bewerben = () => {
   const [selectedFiles, setSelectedFiles] = useState({});
   const [isChecked, setIsChecked] = useState(false);
+ const [formValues, setFormValues] = useState({
+    vorname: '',
+    nachname: '',
+    email: '',
+    phone: '',
+    ort: '',
+    plz: '',
+    pensum: '',
+    datumVon: '',
+    datumBis: '',
+    mitteilung: '',
+  });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
 
   const handleBewerbungSenden = async () => {
     const formData = new FormData();
-    formData.append('vorname', '');
-    formData.append('nachname', '');
-    formData.append('email', '');
-    formData.append('phone', '');
-    formData.append('ort', '');
-    formData.append('plz', '');
-    formData.append('pensum', '');
-    formData.append('datumVon', '');
-    formData.append('datumBis', '');
-    formData.append('mitteilung', '');
+
+    Object.entries(formValues).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    Object.entries(selectedFiles).forEach(([key, file]) => {
+      formData.append(key, file);
+    });
   
     // Add files if needed
     // formData.append('cv', yourCVFile);
   
     try {
-      const response = await fetch('http://localhost:5000/send-email-bewerben', {
+      const response = await fetch('https://keta-job-0.onrender.com/send-email-bewerben', {
+
         method: 'POST',
         body: formData,
       });
@@ -36,6 +51,7 @@ const Bewerben = () => {
       alert('Fehler beim Senden der Bewerbung.');
     }
   };
+  
 
 
 
@@ -132,6 +148,9 @@ const Bewerben = () => {
                   <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Vorname</label>
                   <input
                     type="text"
+                    name="vorname"
+                    value={formValues.vorname}
+                    onChange={handleInputChange}
                     placeholder="Vorname"
                     className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px]  md:h-[42px] h-[28.49px]  px-4 py-2 text-black   placeholder-gray-500"
                   />
@@ -140,6 +159,9 @@ const Bewerben = () => {
                   <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Nachname</label>
                   <input
                     type="text"
+                    name="nachname"
+                    value={formValues.nachname}
+                    onChange={handleInputChange}
                     placeholder="Nachname"
                     className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[280px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
@@ -148,6 +170,9 @@ const Bewerben = () => {
                   <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 whitespace-nowrap  md:text-[18px]">E-Mail Adresse</label>
                   <input
                     type="text"
+                    name="email"
+                    value={formValues.email}
+                    onChange={handleInputChange}
                     placeholder="Email"
                     className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
@@ -156,6 +181,9 @@ const Bewerben = () => {
                   <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0  md:text-[18px]">Mobil</label>
                   <input
                     type="text"
+                    name="phone"
+                    value={formValues.phone}
+                    onChange={handleInputChange}
                     placeholder="E.G. +1 300...."
                     className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0  text-[8.63px] md:text-base w-[303px] md:w-[280px] h-[28.49px] md:h-[42px] px-4 py-2 text-black   placeholder-gray-500"
                   />
@@ -175,6 +203,9 @@ const Bewerben = () => {
                     <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 md:text-[18px] pt-0 md:pt-4">ORT</label>
                     <input
                       type="text"
+                      name="ort"
+                      value={formValues.ort}
+                      onChange={handleInputChange}
                       placeholder="Ort"
                       className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
                     />
@@ -183,6 +214,9 @@ const Bewerben = () => {
                     <label className="text-[#003049] text-[18px] -ml-[80px] md:-ml-0 pt-0 md:pt-4 md:text-[18px]">PLZ</label>
                     <input
                       type="text"
+                      name="plz"
+                      value={formValues.plz}
+                      onChange={handleInputChange}
                       placeholder="PLZ"
                       className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
                     />
@@ -203,6 +237,9 @@ const Bewerben = () => {
                     </label>
                     <input
                       type="text"
+                      name="pensum"
+                      value={formValues.pensum}
+                      onChange={handleInputChange}
                       placeholder="z.B. 80%"
                       className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
                     />
@@ -213,6 +250,9 @@ const Bewerben = () => {
                     </label>
                     <input
                       type="date"
+                      name="datumVon"
+                      value={formValues.datumVon}
+                      onChange={handleInputChange}
                       className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
                     />
                   </div>
@@ -222,6 +262,9 @@ const Bewerben = () => {
                     </label>
                     <input
                       type="date"
+                      name="datumBis"
+                      value={formValues.datumBis}
+                      onChange={handleInputChange}
                       className="border border-gray-300 rounded-[236.29px] -ml-[90px] md:-ml-0 text-[8.63px] md:text-base w-[303px] md:w-[228.55px] h-[28.49px] md:h-[42px] px-4 py-2 text-black placeholder-gray-500"
                     />
                   </div>
@@ -278,7 +321,13 @@ const Bewerben = () => {
             {/* Message Field */}
             <div className="flex flex-col items-start ml-6 md:ml-0 mb-2 md:mb-6   mx-auto  m md:mt-6">
               <label className="text-[#003049] text-[12.09px] -ml-20  md:-ml-0 md:text-[16px] mb-2">Mitteilung</label>
-              <textarea placeholder="Weitere Informationen hinzufügen" className="border border-gray-300 -ml-20  md:-ml-0 text-[8.63px] md:text-base rounded-[23.01px] w-[303px] md:w-[659px] h-[133px] md:h-[132pxpx] px-4 py-4 text-black placeholder-gray-500 resize-none"></textarea>
+              <textarea
+                name="mitteilung"
+                value={formValues.mitteilung}
+                onChange={handleInputChange}
+                placeholder="Weitere Informationen hinzufügen"
+                className="border border-gray-300 -ml-20  md:-ml-0 text-[8.63px] md:text-base rounded-[23.01px] w-[303px] md:w-[659px] h-[133px] md:h-[132pxpx] px-4 py-4 text-black placeholder-gray-500 resize-none"
+              ></textarea>
             </div>
 
             {/* Agreement Checkbox */}

@@ -22,7 +22,7 @@ const Page5 = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/send-email-page5', {
+const response = await fetch('https://keta-job-0.onrender.com/send-email-page5', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -57,7 +57,8 @@ const Formular2 = () => {
     
 
     try {
-      const response = await fetch('http://localhost:5000/send-email-formular2', {
+     const response = await fetch('https://keta-job-0.onrender.com/send-email-formular2', {
+
         method: 'POST',
         body: formDataObject, // Ensure multipart/form-data is sent
       });

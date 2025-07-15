@@ -13,7 +13,9 @@ console.log('PORT:', process.env.PORT || '❌ NOT LOADED');
 
 const app = express();
 const port = process.env.PORT || 5000;
-
+app.listen(port, () => {
+  console.log(`✅ Server running on http://localhost:${port}`);
+});
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -150,6 +152,4 @@ app.post('/send-email-bewerben', upload.fields([
 });
 
 // ✅ Start server
-app.listen(port, () => {
-  console.log(`✅ Server running on http://localhost:${port}`);
-});
+
