@@ -257,17 +257,19 @@ const HomePage = () => {
 
               {/* Text Content */}
               <div className="w-[1000px] text-left md:pl-8 text-lg">
+<<<<<<< HEAD
                  <p className="mb-4">
                   KETA Job ist der Name einer Marke und ein eigener Geschäftsbereich, der zur KETA Group AG gehört.
 
                 </p>
+=======
+                <p className='mb-4'> Die KETA Job ist ein Ast der KETA Group AG und agiert unter einer gemeinsamen Marke.</p>
+>>>>>>> b4b0747b9e48c54ce36c077cf57f7aa21c9af287
                 <p className="mb-4">
-                  Wir sind seit 2013 in den Diensten der Menschheit tätig. Unser Kerngeschäft
-                  konzentrierte sich zunächst auf die Personalvermittlung und den Personalverleih im Gesundheitswesen.
+                 Wir sind seit 2013 in den Diensten der Menschheit tätig. Unser Kerngeschäft konzentrierte sich zunächst auf die Personalvermittlung und den Personalverleih im Gesundheitswesen
                 </p>
                 <p className="mb-4">
-                  Aufgrund des Bedarfs an professionellen Fachkräften in anderen Branchen
-                  haben wir uns entschieden, zusätzliche Fachbereiche anzubieten.
+          Aufgrund des Bedarfs an professionellen Fachkräften in anderen Branchen haben wir uns entschieden, zusätzliche Fachbereiche anzubieten. 
                 </p>
                 <p className="mb-4">
                   Wir bieten Ihnen verschiedene Anstellungsmöglichkeiten, sowohl

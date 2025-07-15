@@ -7,6 +7,42 @@ const Bewerben = () => {
   const [selectedFiles, setSelectedFiles] = useState({});
   const [isChecked, setIsChecked] = useState(false);
 
+  const handleBewerbungSenden = async () => {
+    const formData = new FormData();
+    formData.append('vorname', '');
+    formData.append('nachname', '');
+    formData.append('email', '');
+    formData.append('phone', '');
+    formData.append('ort', '');
+    formData.append('plz', '');
+    formData.append('pensum', '');
+    formData.append('datumVon', '');
+    formData.append('datumBis', '');
+    formData.append('mitteilung', '');
+  
+    // Add files if needed
+    // formData.append('cv', yourCVFile);
+  
+    try {
+      const response = await fetch('http://localhost:5000/send-email-bewerben', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const result = await response.text();
+      alert(result);
+    } catch (error) {
+      console.error('❌ Error sending form:', error);
+      alert('Fehler beim Senden der Bewerbung.');
+    }
+  };
+
+
+
+
+
+  
+
   // Function to handle file selection
   const handleFileChange = (e, fieldName) => {
     setSelectedFiles({
@@ -22,14 +58,17 @@ const Bewerben = () => {
     setSelectedFiles(updatedFiles);
   };
 
+  
 
 
   // Function to toggle the radio button state
   const toggleCheck = () => {
     setIsChecked((prev) => !prev);
   };
+  
 
   return (
+    
 
     <div>
       <div className="Uberuns bg-[#003049] text-white font-Montserrat relative">
@@ -83,7 +122,7 @@ const Bewerben = () => {
 
         <div className=" flex md:block items-center justify-center min-h-screen bg-[#003049] text-white py-8 md:py-12 px-16 font-Montserrat">
           {/* Form Container */}
-          <div className="bg-white rounded-[29px] shadow-lg p-20 w-[350px] md:w-[1400px]  h-[1700px] md:h-[933px] mx-auto">
+          <div className="bg-white rounded-[29px] shadow-lg p-20 w-[350px] md:w-[1400px]  h-[1700px] md:h-[980px] mx-auto">
 
             {/* Personal Information Section */}
             <div className="flex flex-col  mb-12">
@@ -261,15 +300,18 @@ const Bewerben = () => {
 
             {/* Submit Button */}
             <div className=" mx-auto flex md:justify-start justify-center">
-              <button className="bg-[#003049] text-light rounded-full px-10 py-3 w-[155px] md:w-[205px] h-[32px] md:h-[46px] text-[10px] md:text-[14px] text-center whitespace-nowrap flex items-center justify-center">
-                BEWERBUNG SENDEN
-              </button>
+            <button
+  onClick={handleBewerbungSenden}
+  className="bg-[#003049] text-light rounded-full px-10 py-3 w-[155px] md:w-[205px] h-[32px] md:h-[46px] text-[10px] md:text-[14px] text-center whitespace-nowrap flex items-center justify-center"
+>
+  BEWERBUNG SENDEN
+</button>
+
             </div>
 
           </div>
         </div>
       </div>
-
 
 
     </div>
