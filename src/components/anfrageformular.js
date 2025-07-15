@@ -209,14 +209,14 @@ function Anfrageformular() {
                   className=" w-[303px] h-[30px] pl-4 md:w-[223px] md:p-4 md:h-12 border border-gray-300 rounded-full"
                 >
                 <option value="">--</option>
-                <option value="job1">Medical</option>
-                <option value="job2">Kader Höhere Angestellte</option>
-                <option value="job3">Technische Berufe</option>
-                <option value="job4">Informatik, Werbung, Grafik, Marketing</option>
-                <option value="job5">Verkaufsberufe</option>
-                <option value="job6">Kaufmannische Berufe</option>
-                <option value="job7">Bank- und Versicherungswesen</option>
-                <option value="job8">Dienstleistungs Berufe</option>
+                <option value="medical">Medical</option>
+                <option value="kader_hohere_angestellte">Kader Höhere Angestellte</option>
+                <option value="technische_berufe">Technische Berufe</option>
+                <option value="informatik_werbung_grafik_marketing">Informatik, Werbung, Grafik, Marketing</option>
+                <option value="verkaufsberufe">Verkaufsberufe</option>
+                <option value="kaufmannische_berufe">Kaufmannische Berufe</option>
+                <option value="bank_und_versicherungswesen">Bank- und Versicherungswesen</option>
+                <option value="dienstleistungs_berufe">Dienstleistungs Berufe</option>
                 </select>
               </div>
             </div>
