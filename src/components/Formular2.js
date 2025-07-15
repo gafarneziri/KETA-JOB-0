@@ -216,14 +216,14 @@ const Formular2 = () => {
                   className="w-[303px] h-[30px] pl-4 md:w-[223px] md:h-12 md:px-4 border border-gray-300 rounded-full text-[#003049] text-base leading-tight"
                 >
                   <option value="">--</option>
-                <option value="job1">Medical</option>
-                <option value="job2">Kader Höhere Angestellte</option>
-                <option value="job3">Technische Berufe</option>
-                <option value="job4">Informatik, Werbung, Grafik, Marketing</option>
-                <option value="job5">Verkaufsberufe</option>
-                <option value="job6">Kaufmannische Berufe</option>
-                <option value="job7">Bank- und Versicherungswesen</option>
-                <option value="job8">Dienstleistungs Berufe</option>
+                <option value="Medical">Medical</option>
+                <option value="Kader Höhere Angestellte">Kader Höhere Angestellte</option>
+                <option value="Technische Berufe">Technische Berufe</option>
+                <option value="Informatik, Werbung, Grafik, Marketing">Informatik, Werbung, Grafik, Marketing</option>
+                <option value="Verkaufsberufe">Verkaufsberufe</option>
+                <option value="Kaufmannische Berufe">Kaufmannische Berufe</option>
+                <option value="Bank- und Versicherungswesen">Bank- und Versicherungswesen</option>
+                <option value="Dienstleistungs Berufe">Dienstleistungs Berufe</option>
                 </select>
               </div>
               <div className='-ml-8 md:ml-0' >
