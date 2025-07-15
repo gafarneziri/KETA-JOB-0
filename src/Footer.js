@@ -80,8 +80,15 @@ function Footer() {
 
           {/* Address Section (Mobile-Only) */}
           <div className="block md:hidden pt-8 text-center text-[10px] text-gray-600">
-            <p>OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ</p>
-            <p>BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ</p>
+           
+               <a
+              href="https://www.google.com/maps/place/Birkenstrasse+47,+6343+Rotkreuz,+Switzerland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              BIRKENSTRASSE 47, 6343 ROTKREUZ, SCHWEIZ
+            </a>
           </div>
 
           {/* Address and Privacy Statement */}
@@ -111,14 +118,7 @@ function Footer() {
           {/* Footer Bottom */}
           <div className="mt-4 flex flex-row justify-center items-center text-[10px] sm:text-xs text-gray-600 gap-[260px] text-center">
             <p>© 2024 KETA GROUP, ALL RIGHTS RESERVED</p>
-            <a
-              href="https://www.google.com/maps/place/Othmarstrasse+8,+8008+Zürich,+Switzerland"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              OTHMARSTRASSE 8, 8008 ZÜRICH, SCHWEIZ
-            </a>
+           
             <a
               href="https://www.google.com/maps/place/Birkenstrasse+47,+6343+Rotkreuz,+Switzerland"
               target="_blank"

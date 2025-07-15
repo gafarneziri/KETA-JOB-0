@@ -1,6 +1,6 @@
 import React from 'react';
 import Uberuns1 from '../Assets/Uberuns.png';
-import nidaImage from '../Assets/NidaImage1.png';
+import nidaImage from '../Assets/nida-570x696.png';
 import fatimeImage from '../Assets/FatimeImage.png';
 import emailIcon from '../Assets/emailIcon.png';
 import phoneIcon from '../Assets/phoneIcon.png';
@@ -48,7 +48,12 @@ const Uberuns = () => {
       <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 py-8 sm:py-10 space-y-8 sm:space-y-0 px-2 sm:px-4">
         {/* Profile 1 */}
         <div className="text-white p-4 sm:p-6">
-          <img src={nidaImage} alt="Nida Hamiti" className="w-full sm:w-96 h-auto object-cover rounded-lg mx-auto mb-4" />
+          <img
+  src={nidaImage}
+  alt="Nida Hamiti"
+  className="w-full sm:w-96 h-auto sm:h-[435px] object-cover rounded-2xl mx-auto mb-4"
+/>
+
           <h2 className="text-center text-xl">Frau</h2>
           <h3 className="text-center text-2xl font-semibold">Nida Hamiti</h3>
           <p className="text-center text-md mb-2">CEO</p>
@@ -59,7 +64,7 @@ const Uberuns = () => {
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
-            <a href="mailto:nida@keta-group.ch" className="text-sm">nh@keta-group.ch</a>
+            <a href="mailto:nida@keta-group.ch" className="text-sm">nh@ketagroup.ch</a>
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
@@ -83,7 +88,7 @@ const Uberuns = () => {
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
-            <a href="mailto:fatime@keta-group.ch" className="text-sm">fh@keta-group.ch</a>
+            <a href="mailto:fatime@keta-group.ch" className="text-sm">fh@ketagroup.ch</a>
           </div>
           <div className="flex items-center justify-center space-x-2 mt-4">
             <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />

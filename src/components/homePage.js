@@ -257,6 +257,10 @@ const HomePage = () => {
 
               {/* Text Content */}
               <div className="w-[1000px] text-left md:pl-8 text-lg">
+                 <p className="mb-4">
+                  KETA Job ist der Name einer Marke und ein eigener Geschäftsbereich, der zur KETA Group AG gehört.
+
+                </p>
                 <p className="mb-4">
                   Wir sind seit 2013 in den Diensten der Menschheit tätig. Unser Kerngeschäft
                   konzentrierte sich zunächst auf die Personalvermittlung und den Personalverleih im Gesundheitswesen.
@@ -284,6 +288,10 @@ const HomePage = () => {
             {/* THIS IS THE HIDDEN IN DESKTOP ONE */}
             <div className="md:hidden">
               <div className="text-[12px]">
+                <p className="mb-4">
+                 KETA Job ist der Name einer Marke und ein eigener Geschäftsbereich, der zur KETA Group AG gehört.
+
+                </p>
                 <p className="mb-4">
                   Wir sind seit 2013 in den Diensten der Menschheit tätig. Unser Kerngeschäft
                   konzentrierte sich zunächst auf die Personalvermittlung und den Personalverleih im Gesundheitswesen.
@@ -452,7 +460,7 @@ const HomePage = () => {
             {/* Second Box */}
             <div className="p-4 text-center -mt-4">
               <div className="text-6xl mb-4">
-                <a href="https://www.instagram.com/keta.promo/">
+                <a href="https://ketapromo.com/">
                   <img
                     src={require("../Assets/Screenshot 2025-01-03 144101.png")}
                     className="mx-auto hover:scale-110 transition-transform duration-300"
@@ -468,7 +476,7 @@ const HomePage = () => {
             {/* Third Box */}
             <div className="p-4 text-center">
               <div className="text-6xl mb-4">
-                <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
+                <a href="https://ketaimmotreu.ch/">
                   <img
                     src={require("../Assets/kt3.png")}
                     className="mx-auto hover:scale-110 transition-transform duration-300"
@@ -498,7 +506,7 @@ const HomePage = () => {
           <div className="block md:hidden grid grid-cols-2 gap-4 justify-center px-8 items-center pl-12">
             {/* First Box */}
             <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg ">
-              <a href="https://ketajob.ch">
+              <a href="https://ketapromo.com/">
                 <img
                   src={KetaPromologo}
                   alt="Box 1"
@@ -509,7 +517,7 @@ const HomePage = () => {
 
             {/* Second Box */}
             <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-lg">
-              <a href="https://www.instagram.com/keta.promo/">
+              <a href="https://ketaestate.com/">
                 <img
                   src={KetaRealEstatelogo}
                   alt="Box 1"
@@ -520,7 +528,7 @@ const HomePage = () => {
 
             {/* Third Box */}
             <div className="w-[133px] h-[138px] flex items-center justify-center bg-[#003049] rounded-2xl">
-              <a href="https://www.instagram.com/ketaimmotreu?igsh=MWg5dThzMm5razh3Yw==">
+              <a href="https://ketaimmotreu.ch/">
                 <img
                   src={KetaAGlogo}
                   alt="Box 1"
